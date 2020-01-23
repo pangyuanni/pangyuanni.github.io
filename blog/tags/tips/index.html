@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>所有分类 | 风晓博客</title>
+  <title>Tag: tips | 风晓博客</title>
   
   
 
@@ -58,7 +58,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class='cover category half'>
+    <cover class='cover  half'>
       
         
   <h1 class='title'>Demo</h1>
@@ -294,35 +294,119 @@
 <div class='l_main'>
   
     
-      <section class="post-list">
-        <div class='post-wrapper'>
-          <article id="archive-page" class="post article white-box">
-            <section class="archive">
-              <div class="archive-item archive-year mark">
-                <h2>所有分类</h2>
-                <hr>
-              </div>
-              <div class="archive-item archive-post mark">
-                
-                  
-                    <a class="" href="/blog/categories/教程/">
-                      <time><i class='fas fa-folder-open fa-fw' aria-hidden="true"></i>&nbsp;&nbsp;教程</time>
-                      <span class="title">
-                        (9)
-                      </span>
-                    </a>
-                  
-                
-              </div>
-              <br>
-              
-            </section>
-          </article>
-        </div>
-      </section>
+      
+  <section class="post-list">
     
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class='post-wrapper'>
+            <article class="post reveal ">
   
 
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/example/更自由的布局/">
+      更自由的布局
+    </a>
+  </h2>
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="http://fengxiao.com" rel="nofollow">
+        
+          <i class="fas fa-user" aria-hidden="true"></i>
+        
+        <p>Mr. X</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-01-23T10:49:33+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2020年1月23日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>现在（<code>1.2.4 以及更高版本</code>）主题配置文件中旧的侧边栏配置依旧不变，在此基础上新增了<code>layout</code>字段专门用于控制页面显示什么。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span></span><br><span class="line">  <span class="comment"># 文章列表（主页、自定义的列表）布局</span></span><br><span class="line"><span class="attr">  posts:</span></span><br><span class="line">    <span class="comment"># 列表中每一篇文章的meta信息</span></span><br><span class="line"><span class="attr">    meta:</span> <span class="string">[title,</span> <span class="string">author,</span> <span class="string">date,</span> <span class="string">categories,</span> <span class="string">top]</span></span><br><span class="line">    <span class="comment"># 列表类页面的侧边栏</span></span><br><span class="line"><span class="attr">    sidebar:</span> <span class="string">[author,</span> <span class="string">grid,</span> <span class="string">category,</span> <span class="string">tagcloud,</span> <span class="string">list]</span></span><br><span class="line">  <span class="comment"># 文章页面布局</span></span><br><span class="line"><span class="attr">  article:</span></span><br><span class="line">    <span class="comment"># 文章页面主体元素，你也可以在页面的Front-matter中设置</span></span><br><span class="line"><span class="attr">    body:</span> <span class="string">[article,</span> <span class="string">comments]</span></span><br><span class="line">    <span class="comment"># 默认的meta信息，文章中没有配置则按照这里的配置来显示，设置为false则不显示</span></span><br><span class="line">    <span class="comment"># 其中，title只在header中有效，music和thumbnail无需在这里设置，文章中有则显示</span></span><br><span class="line">    <span class="comment"># 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）</span></span><br><span class="line"><span class="attr">    header:</span> <span class="string">[title,</span> <span class="string">author,</span> <span class="string">date,</span> <span class="string">categories,</span> <span class="string">counter,</span> <span class="string">top]</span></span><br><span class="line"><span class="attr">    footer:</span> <span class="string">[updated,</span> <span class="string">tags,</span> <span class="string">share]</span></span><br><span class="line">    <span class="comment"># 文章页面的侧边栏</span></span><br><span class="line"><span class="attr">    sidebar:</span> <span class="string">[author,</span> <span class="string">toc,</span> <span class="string">grid,</span> <span class="string">category,</span> <span class="string">tagcloud,</span> <span class="string">list,</span> <span class="string">related_posts]</span></span><br><span class="line">  <span class="comment"># 其他的页面布局暂时等于文章列表</span></span><br></pre></td></tr></table></figure>
+      
+        <div class="readmore">
+          <a href="/example/更自由的布局/" class="flat-box">
+            <i class="fas fa-book-open fa-fw" aria-hidden="true"></i>
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blog/tags/tips/" rel="nofollow"><i class="fas fa-tag fa-fw"></i> tips</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+    
+  </section>
+  
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
+
+  
+
+
+    
+  
 </div>
 <aside class='l_side'>
   
@@ -467,25 +551,102 @@
         
           
           
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
             
-              
+              <section class='widget list'>
+  
+<header class='pure'>
+  <div><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;强烈推荐</div>
+  
+</header>
+
+  <div class='content pure'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/hexo.sh/" href="https://xaoxuu.com/wiki/hexo.sh/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;Hexo脚本（Mac）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/vim-cn.sh/" href="https://xaoxuu.com/wiki/vim-cn.sh/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;图床脚本（Mac）
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://yasuotu.com" href="https://yasuotu.com"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;图片在线压缩
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://realfavicongenerator.net" href="https://realfavicongenerator.net"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;生成Favicon
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://mxclub.github.io/resume/" href="https://mxclub.github.io/resume/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;简历主题
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
 
             
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
           
         
       
@@ -699,140 +860,6 @@
 
 
             
-          
-        
-          
-          
-        
-          
-          
-        
-      
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-            
-              <section class='widget list'>
-  
-<header class='pure'>
-  <div><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;强烈推荐</div>
-  
-</header>
-
-  <div class='content pure'>
-    <ul class="entry">
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/hexo.sh/" href="https://xaoxuu.com/wiki/hexo.sh/"
-          
-          
-          >
-          <div class='name'>
-            
-              <i class=" fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;Hexo脚本（Mac）
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/vim-cn.sh/" href="https://xaoxuu.com/wiki/vim-cn.sh/"
-          
-          
-          >
-          <div class='name'>
-            
-              <i class=" fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;图床脚本（Mac）
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="https://yasuotu.com" href="https://yasuotu.com"
-          
-          
-          >
-          <div class='name'>
-            
-              <i class=" fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;图片在线压缩
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="https://realfavicongenerator.net" href="https://realfavicongenerator.net"
-          
-          
-          >
-          <div class='name'>
-            
-              <i class=" fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;生成Favicon
-          </div>
-          
-        </a></li>
-      
-        <li><a class="flat-box" title="https://mxclub.github.io/resume/" href="https://mxclub.github.io/resume/"
-          
-          
-          >
-          <div class='name'>
-            
-              <i class=" fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;简历主题
-          </div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-            
-          
-        
-      
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
-          
-        
-          
           
         
           
