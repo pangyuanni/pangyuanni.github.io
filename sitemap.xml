@@ -4,22 +4,17 @@
 
     <sitemap>
         <loc>http://www.windknows.com/post-sitemap.xml</loc>
-        <lastmod>2020-01-23T02:49:33.663Z</lastmod>
+        <lastmod>2020-01-27T12:59:01.877Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://www.windknows.com/page-sitemap.xml</loc>
-        <lastmod>2020-01-23T02:49:33.689Z</lastmod>
+        <lastmod>2020-01-27T05:03:26.128Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://www.windknows.com/category-sitemap.xml</loc>
-        <lastmod>2020-01-23T02:49:33.663Z</lastmod>
-    </sitemap>
-
-    <sitemap>
-        <loc>http://www.windknows.com/tag-sitemap.xml</loc>
-        <lastmod>2020-01-23T02:49:33.662Z</lastmod>
+        <lastmod>2020-01-27T12:59:01.877Z</lastmod>
     </sitemap>
 
 </sitemapindex>

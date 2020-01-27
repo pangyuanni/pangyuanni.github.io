@@ -8,15 +8,22 @@
     </url>
     
     <url>
-        <loc>http://www.windknows.com/projects/</loc>
-        <lastmod>2020-01-23T02:49:33.689Z</lastmod>
+        <loc>http://www.windknows.com/friends/</loc>
+        <lastmod>2020-01-27T05:03:26.128Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     
     <url>
-        <loc>http://www.windknows.com/friends/</loc>
-        <lastmod>2020-01-23T02:49:33.688Z</lastmod>
+        <loc>http://www.windknows.com/about/</loc>
+        <lastmod>2020-01-27T05:00:25.764Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>http://www.windknows.com/projects/</loc>
+        <lastmod>2020-01-23T02:49:33.689Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -31,13 +38,6 @@
     <url>
         <loc>http://www.windknows.com/blog/categories/</loc>
         <lastmod>2020-01-23T02:49:33.686Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://www.windknows.com/about/</loc>
-        <lastmod>2020-01-23T02:49:33.672Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
