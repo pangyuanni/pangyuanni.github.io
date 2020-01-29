@@ -21,7 +21,7 @@
       <link href="/django/"/>
       <url>/django/</url>
       
-        <content type="html"><![CDATA[<h1 id="搭建Hexo博客中遇到的问题"><a href="#搭建Hexo博客中遇到的问题" class="headerlink" title="搭建Hexo博客中遇到的问题"></a>搭建Hexo博客中遇到的问题</h1><h3 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h3><p>   本来刚开始想用python的django框架进行个人博客的搭建，但是使用python框架进行搭建的话， 但是进行到一半就不想干了，因为代码量太复杂，太繁琐，后来在网上发现了hexo这个专业的博客框架，搭建起来比较django省时省力，就决定用Hexo来搭建，在本地搭建没什么问题，但部署在云服务器的过程异常艰难。但最终，在神器——百度 的帮助下，问题全部解决</p><h2 id="Hexo-说明"><a href="#Hexo-说明" class="headerlink" title="Hexo 说明"></a>Hexo 说明</h2><p>Hexo是基于nodeJS环境的静态博客，简单来说就是轻量，简易，高逼格的博客工具，hexo是将markdown文件生成静态的html然后将生成的html上传到我们的服务器，简而言之：hexo是个静态页面生成，上传的工具</p><h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a><strong>准备环境</strong></h3><p>先安利一个在windows下非常好用的命令行工具<a href="https://cmder.net/" target="_blank" rel="noopener">cmder</a>,关于他的好用之处，在另一篇博客有详细说明</p><ol><li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 下载后，双击打开安装，也是一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</p></li><li><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载安装，下载后一路next就好</p></li><li><p>用npm安装Hexo</p><p>   npm install -g hexo-cli  // npm是安装Nodejs一起安装的包管理工具</p></li></ol><p>这样我们的hexo在本地就差不多完成了，然后我们新建一个空的文件夹，进去初始化博客（这里我新建一个blog的文件夹）然后输入下列命令</p><p>hexo init </p><p>也可以使用 hexo init  <folder>，其中 <folder>为保存Hexo的项目路径，然后就等待clone，就会把各种配置文件下载到你的文件夹中了，</folder></folder></p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580272257188.png" alt="1580272257188"></p><p>然后执行 hexo s 基本的博客就能成功运行了</p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580272358124.png" alt="1580272358124"></p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580272388005.png" alt="1580272388005"></p><p>到这儿我们在本地的博客已经搭建完成了，然后在配置文件（项目根目录下的）</p><p>_config.yml中修改相关配置，就能对我们的博客进行修改</p><p>首先在github上新建一个仓库，注意名字要设成username.github.io </p><p>我们将我们的博客部署到github或者coding上的话修改</p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580272619860.png" alt="1580272619860"></p><p>修改repo地址就行，然后用hexo clean（清除缓存），然后用hexo g（生成静态文件），hexo d （上传至github）</p><p>然后我们就可以用外网访问了，地址就是username.github.io这样我们就能访问了</p><p>例如我的博客</p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580273536952.png" alt="1580273536952"></p><p>但是部署到github上的话有内存限制，是300mb 长期使用的话，还是建议部署到自己的云服务器上，我买的是华为的云服务器，系统是centos7</p><p>部署大概过程和gihub上类似，就是在云服务器上建一个远程仓库，然后将项目文件，上传到服务器的远程仓库，具体过程，下篇博客在进行分享</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="搭建Hexo博客中遇到的问题"><a href="#搭建Hexo博客中遇到的问题" class="headerlink" title="搭建Hexo博客中遇到的问题"></a>搭建Hexo博客中遇到的问题</h1><h3 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h3><p>   本来刚开始想用python的django框架进行个人博客的搭建，但是使用python框架进行搭建的话， 但是进行到一半就不想干了，因为代码量太复杂，太繁琐，后来在网上发现了hexo这个专业的博客框架，搭建起来比较django省时省力，就决定用Hexo来搭建，在本地搭建没什么问题，但部署在云服务器的过程异常艰难。但最终，在神器——百度 的帮助下，问题全部解决</p><h2 id="Hexo-说明"><a href="#Hexo-说明" class="headerlink" title="Hexo 说明"></a>Hexo 说明</h2><p>Hexo是基于nodeJS环境的静态博客，简单来说就是轻量，简易，高逼格的博客工具，hexo是将markdown文件生成静态的html然后将生成的html上传到我们的服务器，简而言之：hexo是个静态页面生成，上传的工具</p><h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a><strong>准备环境</strong></h3><p>先安利一个在windows下非常好用的命令行工具<a href="https://cmder.net/" target="_blank" rel="noopener">cmder</a>,关于他的好用之处，在另一篇博客有详细说明</p><ol><li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 下载后，双击打开安装，也是一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</p></li><li><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载安装，下载后一路next就好</p></li><li><p>用npm安装Hexo</p><p>   npm install -g hexo-cli  // npm是安装Nodejs一起安装的包管理工具</p></li></ol><p>这样我们的hexo在本地就差不多完成了，然后我们新建一个空的文件夹，进去初始化博客（这里我新建一个blog的文件夹）然后输入下列命令</p><p>hexo init </p><p>也可以使用 hexo init  <folder>，其中 <folder>为保存Hexo的项目路径，然后就等待clone，就会把各种配置文件下载到你的文件夹中了，</folder></folder></p><p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129052843085.png" alt=""></p><p>然后执行 hexo s 基本的博客就能成功运行了</p><p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129052936282.png" alt=""></p><p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129053008515.png" alt=""></p><p>到这儿我们在本地的博客已经搭建完成了，然后在配置文件（项目根目录下的）</p><p>_config.yml中修改相关配置，就能对我们的博客进行修改</p><p>首先在github上新建一个仓库，注意名字要设成username.github.io </p><p>我们将我们的博客部署到github或者coding上的话修改</p><p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129053046211.png" alt=""></p><p>修改repo地址就行，然后用hexo clean（清除缓存），然后用hexo g（生成静态文件），hexo d （上传至github）</p><p>然后我们就可以用外网访问了，地址就是username.github.io这样我们就能访问了</p><p>例如我的博客</p><p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129053112712.png" alt=""></p><p>但是部署到github上的话有内存限制，是300mb 长期使用的话，还是建议部署到自己的云服务器上，我买的是华为的云服务器，系统是centos7</p><p>部署大概过程和gihub上类似，就是在云服务器上建一个远程仓库，然后将项目文件，上传到服务器的远程仓库，具体过程，下篇博客在进行分享</p>]]></content>
       
       
       <categories>
@@ -86,22 +86,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/projects/index.html"/>
-      <url>/projects/index.html</url>
+      <title>我的朋友们</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p><br></p><p>各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～</p><blockquote><p>名称： 风晓博客<br>头像：  <a href="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg" target="_blank" rel="noopener">http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg</a><br>网址： <a href="https://www.windknows.com">https://www.windknows.com</a><br>标签： iOS</p></blockquote>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>我的朋友们</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title></title>
+      <link href="/projects/index.html"/>
+      <url>/projects/index.html</url>
       
-        <content type="html"><![CDATA[<p><br></p><p>各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～</p><blockquote><p>名称： 风晓博客<br>头像：  <a href="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg" target="_blank" rel="noopener">http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg</a><br>网址： <a href="https://www.windknows.com">https://www.windknows.com</a><br>标签： iOS</p></blockquote>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
