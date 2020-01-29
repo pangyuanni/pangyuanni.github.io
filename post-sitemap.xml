@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>http://www.windknows.com/django/</loc>
+        <lastmod>2020-01-29T04:56:20.799Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.windknows.com/hexo-buliding/</loc>
+        <lastmod>2020-01-29T03:01:48.323Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.windknows.com/example/top/</loc>
         <lastmod>2020-01-27T12:59:01.877Z</lastmod>
         <changefreq>weekly</changefreq>
