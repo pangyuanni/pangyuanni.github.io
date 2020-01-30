@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>http://www.windknows.com/hexo/</loc>
+        <lastmod>2020-01-30T03:54:16.384Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.windknows.com/example/hexo-cloud/</loc>
         <lastmod>2020-01-30T03:46:28.712Z</lastmod>
         <changefreq>weekly</changefreq>
