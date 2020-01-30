@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.windknows.com/"/>
-  <updated>2020-01-30T03:54:16.384Z</updated>
+  <updated>2020-01-30T03:46:28.712Z</updated>
   <id>http://www.windknows.com/</id>
   
   <author>
@@ -17,23 +17,9 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hexo 云服务器部署</title>
-    <link href="http://www.windknows.com/hexo/"/>
-    <id>http://www.windknows.com/hexo/</id>
-    <published>2020-01-30T03:53:44.000Z</published>
-    <updated>2020-01-30T03:54:16.384Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title></title>
-    <link href="http://www.windknows.com/example/hexo-cloud/"/>
-    <id>http://www.windknows.com/example/hexo-cloud/</id>
+    <link href="http://www.windknows.com/hexo-cloud/"/>
+    <id>http://www.windknows.com/hexo-cloud/</id>
     <published>2020-01-30T03:46:15.175Z</published>
     <updated>2020-01-30T03:46:28.712Z</updated>
     
@@ -54,8 +40,8 @@
   
   <entry>
     <title></title>
-    <link href="http://www.windknows.com/example/hexo-buliding/"/>
-    <id>http://www.windknows.com/example/hexo-buliding/</id>
+    <link href="http://www.windknows.com/hexo-buliding/"/>
+    <id>http://www.windknows.com/hexo-buliding/</id>
     <published>2020-01-29T03:01:28.949Z</published>
     <updated>2020-01-30T01:47:51.795Z</updated>
     
