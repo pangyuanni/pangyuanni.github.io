@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>风晓博客</title>
+  <title>hexo云服务器部署 | 风晓博客</title>
   
   
 
@@ -306,7 +306,7 @@
   
     <h1 class="title">
       <a href="/hexo-1/">
-        2020-01-30
+        hexo云服务器部署
       </a>
     </h1>
   
@@ -345,6 +345,14 @@
         
           
             
+  
+  <div class='new-meta-item category'>
+    <a href='/blog/categories/教程/' rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>教程</p>
+    </a>
+  </div>
+
 
           
         
@@ -387,8 +395,7 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <p>title:  hexo 云服务器部署<br>date: 2020-01-30 11:57:25<br>tags:hexo</p>
-<h3 id="categories-教程"><a href="#categories-教程" class="headerlink" title="categories:教程"></a>categories:教程</h3><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>承接上篇博客，上篇博客中我们在Github上部署成功，但Github上的访问速度在国内较慢，而且免费提供的资源有限，不适于长时期的博客运作，所以在此篇文章中，来说一下，我部署在云服务器的过程以及遇到的问题</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>承接上篇博客，上篇博客中我们在Github上部署成功，但Github上的访问速度在国内较慢，而且免费提供的资源有限，不适于长时期的博客运作，所以在此篇文章中，来说一下，我部署在云服务器的过程以及遇到的问题</p>
 <p>首先我们了解一下，hexo利用git更新的流程，部署在Github上和部署在云服务器上没有特别大的本质区别</p>
 <p>整个流程就是本地将markdown文件渲染成静态文件，然后Git推送到服务器的r代码仓库，让服务器通过钩子（hook）同步网站根目录，再利用nginx托管这些静态资源，就可以实现访问</p>
 <h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><h2 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h2><p>Windows10,在本地已经装好了Git，nodejs，hexo，并且在本地已经成功的能调试出来hexo</p>
@@ -458,7 +465,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-01-30T12:01:39+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-01-30T12:20:54+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>更新于 2020年1月30日</p>
@@ -469,6 +476,9 @@
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/hexo-blog/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>hexo,blog</p></a></div>
+
 
         
       
@@ -480,7 +490,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknows.com/hexo-1/&title= | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknows.com/hexo-1/&title=hexo云服务器部署 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -492,7 +502,7 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknows.com/hexo-1/&title= | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknows.com/hexo-1/&title=hexo云服务器部署 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -504,7 +514,7 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://www.windknows.com/hexo-1/&title= | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://service.weibo.com/share/share.php?url=http://www.windknows.com/hexo-1/&title=hexo云服务器部署 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -533,12 +543,17 @@
                       <span class="art-item-right" aria-hidden="true">
                           <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/hexo/" rel="prev" title="">
+                              <a href="/hexo/" rel="prev" title="使用hexo 搭建博客">
                                   
-                                      2020-01-30 星期四
+                                      使用hexo 搭建博客
                                   
                               </a>
                           </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/blog/tags/hexo-blog/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> hexo,blog</a>
+                              </h6>
                           
                       </span>
                   </section>
@@ -581,7 +596,7 @@
 
   <script>
     window.subData = {
-      title: '',
+      title: 'hexo云服务器部署',
       tools: true
     }
   </script>
@@ -743,7 +758,7 @@
 </header>
 
     <div class='content pure'>
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#categories-教程"><span class="toc-text">categories:教程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-text">环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地环境"><span class="toc-text">本地环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器环境"><span class="toc-text">服务器环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本地机器配置"><span class="toc-text">本地机器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置密钥"><span class="toc-text">配置密钥</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#云服务器配置"><span class="toc-text">云服务器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git，nodejs，Nginx等安装"><span class="toc-text">Git，nodejs，Nginx等安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建git新用户以及进行配置"><span class="toc-text">创建git新用户以及进行配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建git新用户"><span class="toc-text">创建git新用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将公钥配置到服务器上"><span class="toc-text">将公钥配置到服务器上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试git链接"><span class="toc-text">测试git链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建网站根目录"><span class="toc-text">创建网站根目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置nginx"><span class="toc-text">配置nginx</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现自动化部署"><span class="toc-text">实现自动化部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立git裸库（就是空的）"><span class="toc-text">建立git裸库（就是空的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用钩子同步网站根目录"><span class="toc-text">使用钩子同步网站根目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地机器中部署至服务器"><span class="toc-text">本地机器中部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Hexo"><span class="toc-text">配置Hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试自动化部署"><span class="toc-text">测试自动化部署</span></a>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#环境"><span class="toc-text">环境</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#本地环境"><span class="toc-text">本地环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#服务器环境"><span class="toc-text">服务器环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本地机器配置"><span class="toc-text">本地机器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#配置密钥"><span class="toc-text">配置密钥</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#云服务器配置"><span class="toc-text">云服务器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Git，nodejs，Nginx等安装"><span class="toc-text">Git，nodejs，Nginx等安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建git新用户以及进行配置"><span class="toc-text">创建git新用户以及进行配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建git新用户"><span class="toc-text">创建git新用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将公钥配置到服务器上"><span class="toc-text">将公钥配置到服务器上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试git链接"><span class="toc-text">测试git链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建网站根目录"><span class="toc-text">创建网站根目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置nginx"><span class="toc-text">配置nginx</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实现自动化部署"><span class="toc-text">实现自动化部署</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立git裸库（就是空的）"><span class="toc-text">建立git裸库（就是空的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用钩子同步网站根目录"><span class="toc-text">使用钩子同步网站根目录</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#本地机器中部署至服务器"><span class="toc-text">本地机器中部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Hexo"><span class="toc-text">配置Hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#测试自动化部署"><span class="toc-text">测试自动化部署</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -895,6 +910,31 @@
           
             
               
+  <section class='widget category'>
+    
+<header class='pure'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/categories/"
+    title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/blog/categories/教程/" href="/blog/categories/教程/"><div class='name'>教程</div><div class='badge'>(2)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
             
           
@@ -929,6 +969,27 @@
           
             
               
+  <section class='widget tagcloud'>
+    
+<header class='pure'>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content pure'>
+      <a href="/blog/tags/hexo-blog/" style="font-size: 14px; color: #999">hexo,blog</a>
+    </div>
+  </section>
+
 
             
           
