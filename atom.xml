@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>风晓博客</title>
   
-  
+  <subtitle>只有飘零的风，知道你所欲所求</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.windknows.com/"/>
