@@ -9,7 +9,23 @@
 
     <url>
         <loc>http://www.windknows.com/hexo-1/</loc>
-        <lastmod>2020-01-30T04:20:54.619Z</lastmod>
+        <lastmod>2020-02-03T07:27:36.811Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.windknows.com/hexo-2/</loc>
+        <lastmod>2020-02-03T07:23:43.421Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.windknows.com/hexo-3/</loc>
+        <lastmod>2020-02-03T05:46:24.877Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -17,7 +33,7 @@
 
     <url>
         <loc>http://www.windknows.com/hexo/</loc>
-        <lastmod>2020-01-30T04:15:56.672Z</lastmod>
+        <lastmod>2020-02-03T03:56:43.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
