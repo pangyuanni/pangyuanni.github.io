@@ -3,15 +3,15 @@
 
 
     <url>
-        <loc>http://www.windknows.com/blog/tags/hexo-blog/</loc>
-        <lastmod>2020-02-03T07:23:43.421Z</lastmod>
+        <loc>http://www.windknows.com/blog/tags/hexo%EF%BC%8Cblog/</loc>
+        <lastmod>2020-02-03T07:27:36.811Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.windknows.com/blog/tags/hexo%EF%BC%8Cblog/</loc>
-        <lastmod>2020-02-03T07:27:36.811Z</lastmod>
+        <loc>http://www.windknows.com/blog/tags/hexo-blog/</loc>
+        <lastmod>2020-02-03T07:32:29.733Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
