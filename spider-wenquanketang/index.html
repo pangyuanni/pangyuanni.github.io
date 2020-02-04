@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>使用hexo 搭建博客(一) | 风晓博客</title>
+  <title>文泉课堂知识库图书爬虫 | 风晓博客</title>
   
   
   <meta name="description" content="一个喜欢瞎玩的博主">
@@ -309,8 +309,8 @@
         
   
     <h1 class="title">
-      <a href="/hexo/">
-        使用hexo 搭建博客(一)
+      <a href="/spider-wenquanketang/">
+        文泉课堂知识库图书爬虫
       </a>
     </h1>
   
@@ -341,7 +341,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-01-30</p>
+    <p>2020-02-04</p>
   </a>
 </div>
 
@@ -351,9 +351,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blog/categories/教程/' rel="nofollow">
+    <a href='/blog/categories/python/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>教程</p>
+      <p>python</p>
     </a>
   </div>
 
@@ -385,14 +385,14 @@
       <a class='notlink'>
         <i class="fas fa-keyboard" aria-hidden="true"></i>
         <p>字数统计:</p>
-        <p>1k字</p>
+        <p>1.4k字</p>
       </a>
     </div>
     <div class="new-meta-item readtime">
       <a class='notlink'>
         <i class="fas fa-hourglass-half" aria-hidden="true"></i>
         <p>阅读时长≈</p>
-        <p>3分</p>
+        <p>5分</p>
       </a>
     </div>
   
@@ -414,35 +414,49 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h1 id="使用Hexo搭建博客（一）"><a href="#使用Hexo搭建博客（一）" class="headerlink" title="使用Hexo搭建博客（一）"></a>使用Hexo搭建博客（一）</h1><h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><p>   本来刚开始想用python的django框架进行个人博客的搭建，但是使用python框架进行搭建的话， 但是进行到一半就不想干了，因为代码量太复杂，太繁琐，后来在网上发现了hexo这个专业的博客框架，搭建起来比较django省时省力，就决定用Hexo来搭建，在本地搭建没什么问题，但部署在云服务器的过程异常艰难。但最终，在神器——百度 的帮助下，问题全部解决</p>
-<h2 id="Hexo-说明"><a href="#Hexo-说明" class="headerlink" title="Hexo 说明"></a>Hexo 说明</h2><p>Hexo是基于nodeJS环境的静态博客，简单来说就是轻量，简易，高逼格的博客工具，hexo是将markdown文件生成静态的html然后将生成的html上传到我们的服务器，简而言之：hexo是个静态页面生成，上传的工具</p>
-<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><p>先安利一个在windows下非常好用的命令行工具<a href="https://cmder.net/" target="_blank" rel="noopener">cmder</a>,关于他的好用之处，在另一篇博客有详细说明</p>
-<ol>
-<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 下载后，双击打开安装，也是一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>昨天导员老师发了个通知，说在疫情期间，清华大学的文泉课堂资源免费开放，那何不用爬虫技术，将所有的的电子书下载下来，于是就有了这篇文章</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>首先确定一下爬取的思路，浏览了一下发现并没有直接下载的链接，只能免费的阅读里面的书，打开阅读界面，书是以图片的形式呈现的，于是我们的爬虫思路是按顺序爬取所有的图片，最后合成一个pdf文件，这样我们就成功的获取到了这本书的pdf版</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>我们打开浏览器，随便打开一本书，然后打开调试，发现网页源码并不能直接获得，是通过动态加载的，所以只能考虑图片地址的规律</p>
+<p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580799748700.png" alt="1580799748700"></p>
+<p>我们会发现，图片的url是页数，后面是一串字符串，这时经百度发现这是<a href="https://baijiahao.baidu.com/s?id=1608021814182894637&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">jwt</a></p>
+<p>可以理解成是web验证身份的一种方式吧，我也是第一次接触，在网上看了很多相关的文章，在这里推荐几篇</p>
+<p><a href="https://blog.csdn.net/weixin_42030357/article/details/95629924" target="_blank" rel="noopener">利用JWT生成Token的原理及公钥和私钥加密和解密的原则</a></p>
+<p><a href="http://blog.leapoahead.com/2015/09/06/understanding-jwt/" target="_blank" rel="noopener">JSON Web Token - 在Web应用间安全地传递信息</a></p>
+<p><a href="https://baijiahao.baidu.com/s?id=1608021814182894637&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">10分钟了解JSON Web令牌（JWT）</a></p>
+<p><a href="https://blog.csdn.net/lizhiqiang1217/article/details/90523209" target="_blank" rel="noopener">Jwt简介</a></p>
+<p>简单地说JWT 的原理是，服务器认证以后，生成一个 JSON 对象，发回给用户，就像下面这样。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJuaW5naGFvLm5ldCIsImV4cCI6IjE0Mzg5NTU0NDUiLCJuYW1lIjoid2FuZ2hhbyIsImFkbWluIjp0cnVlfQ.SwyHTEx_RQppr97g4J5lKXtabJecpejuef8AqKYMAJc</span><br></pre></td></tr></table></figure>
+<p>jwt由三部分构成分别如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Header（头部）</span><br><span class="line">Payload（负载）</span><br><span class="line">Signature（签名）</span><br></pre></td></tr></table></figure>
+<p>我百度了一下有个<a href="http://jwt.calebb.net/" target="_blank" rel="noopener">jwt</a>的在线解密的网站，进去后随便复制一个图片的token如图：</p>
+<p><img src="http://q4uie93wz.bkt.clouddn.com/20200203120623653/20200204034646697.png" alt=""></p>
+<h2 id="里面的数据："><a href="#里面的数据：" class="headerlink" title="里面的数据："></a>里面的数据：</h2><ol>
+<li><p>alg属性表示签名的算法（algorithm），默认是 HMAC SHA256（写成HS256）；typ属性表示这个令牌（token）的类型（type），JWT 令牌统一写为JWT。</p>
 </li>
-<li><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载安装，下载后一路next就好</p>
-</li>
-<li><p>用npm安装Hexo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  // npm是安装Nodejs一起安装的包管理工具</span><br></pre></td></tr></table></figure>
+<li><p>中间的dict是Payload，可以理解成我们要给服务器的数据，其中p代表页数，t是时间戳，b是书的id就是bid，k值我看了半天没看懂，后来在网页中我发现了个请求如下图：</p>
+<p>​       <img src="http://q4uie93wz.bkt.clouddn.com/20200203120623653/20200204040745561.png" alt="k值"></p>
 </li>
 </ol>
-<p>这样我们的hexo在本地就差不多完成了，然后我们新建一个空的文件夹，进去初始化博客（这里我新建一个blog的文件夹）然后输入下列命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init # hexo会在目标文件夹简历网站所需要的所有文件</span><br><span class="line">npm install # 安装依赖包</span><br></pre></td></tr></table></figure>
-<p>也可以使用 hexo init  <folder>，其中 <folder>为保存Hexo的项目路径，然后就等待clone，就会把各种配置文件下载到你的文件夹中了，</folder></folder></p>
-<p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129052843085.png" alt=""></p>
-<h3 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g #等同于hexo generate,胜场静态文件到public文件夹</span><br><span class="line">hexo s # 等同于hexo server,在本地服务器运行</span><br></pre></td></tr></table></figure>
-<p>还有一个命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #作为清除静态文件夹的内容并删掉，主要用于更改变更了某些地方导致页面显示不完善</span><br></pre></td></tr></table></figure>
-<p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129052936282.png" alt=""></p>
-<p>之后就可以打开浏览器并输入ip地址<a href="http://localhost:4000/查看，效果如下" target="_blank" rel="noopener">http://localhost:4000/查看，效果如下</a></p>
-<p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129053008515.png" alt=""></p>
-<h3 id="新建页面和文章"><a href="#新建页面和文章" class="headerlink" title="新建页面和文章"></a>新建页面和文章</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new 'title' #生成新文章，路径在:\source\_post\title.md</span><br><span class="line">hexo new page 'title' #生成新页面,可在主题配置文件中配置页面</span><br></pre></td></tr></table></figure>
-<p>生成文章或页面的模板放在博客文件夹根目录下的 scaffolds/ 文件夹里面，文章对应的是 post.md ，页面对应的是page.md，草稿的是draft.md</p>
-<h3 id="编辑文章"><a href="#编辑文章" class="headerlink" title="编辑文章"></a>编辑文章</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Start My Blog Trip — Power By Hexo  # 文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line">date: 2017-2-10 23:49:28  # 文章生成时间，一般不改</span><br><span class="line">categories: diary  # 文章分类目录，多个分类使用[a,b,c]这种格式</span><br><span class="line">tags: [Hexo,diary]  # 文章标签</span><br><span class="line">---</span><br><span class="line"><span class="meta">#</span>这里开始使用markdown格式输入你的正文。</span><br><span class="line">&lt;!--more--&gt; </span><br><span class="line"><span class="meta">#</span>more标签以下的内容要点击“阅读全文”才能看见，#more标签以上的内容为你首页显示文章的摘要部分</span><br></pre></td></tr></table></figure>
-<h3 id="Markdown文章编辑"><a href="#Markdown文章编辑" class="headerlink" title="Markdown文章编辑"></a>Markdown文章编辑</h3><p>如果不熟悉MD语法，可以去百度，B站找教学，不难，常用的语法就那么几个</p>
-<p>再给大家安利个md文章神器<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>,还有hexo文章神器<a href="http://pdidc.jb51.net:81/201903/tools/HexoEdit32_jb51.rar" target="_blank" rel="noopener">HexoEditor</a></p>
-<h3 id="常用命令总结"><a href="#常用命令总结" class="headerlink" title="常用命令总结"></a>常用命令总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo init [folder] # 初始化一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站</span><br><span class="line">hexo new [layout] &lt;title&gt; # 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</span><br><span class="line">hexo version # 查看版本</span><br><span class="line">hexo clean # 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo g # 等于hexo generate # 生成静态文件</span><br><span class="line">hexo s # 等于hexo server # 本地预览</span><br><span class="line">hexo d # 等于hexo deploy # 部署，可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure>
-<p>本篇文章先到这儿，下篇文章给大家分享分享打造个性化的hexo-blog</p>
+<pre><code>刚好和上面的k值里的u，i，t，b，n对上，所以我就肯定没错了，是 这个  了，然后所有的东西确定了之后，我们就开始构建吧,然后在Headers里找到相关信息，并进行获取就行
+</code></pre><ol start="3">
+<li>最下面的是Signature 部分是对前两部分的签名，防止数据篡改。</li>
+</ol>
+<p>算出签名以后，把 Header、Payload、Signature 三个部分拼成一个字符串，每个部分之间用”点”（.）分隔，就可以返回给用户。</p>
+<p>代码如下图示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen_jwt_token</span><span class="params">(bookid, page)</span>:</span></span><br><span class="line">  <span class="string">''' get jwt token '''</span></span><br><span class="line">  cur_time = time.time()  //时间戳</span><br><span class="line">  jwtkey = gen_jwt_key(bookid)  //token里的k值</span><br><span class="line">  jwttoken = jwt.encode(</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="string">"p"</span>: page,</span><br><span class="line">      <span class="string">"t"</span>: int(cur_time) * <span class="number">1000</span>,</span><br><span class="line">      <span class="string">"b"</span>: str(bookid),</span><br><span class="line">      <span class="string">"w"</span>: <span class="number">1000</span>,</span><br><span class="line">      <span class="comment"># "k": json.dumps(self.jwtkey),</span></span><br><span class="line">      <span class="string">"k"</span>: json.dumps(jwtkey),</span><br><span class="line">      <span class="string">"iat"</span>: int(cur_time),</span><br><span class="line">    &#125;,  //进行编码</span><br><span class="line">    JWT_SECRET,</span><br><span class="line">    algorithm=<span class="string">'HS256'</span>,</span><br><span class="line">  ).decode(<span class="string">'ascii'</span>)</span><br><span class="line">  <span class="keyword">return</span> jwttoken</span><br></pre></td></tr></table></figure>
+<p>k值获取代码</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gen_jwt_key</span><span class="params">(bookid)</span>:</span></span><br><span class="line">  URL =<span class="string">'https://lib-nuanxin.wqxuetang.com'</span></span><br><span class="line">  url = <span class="string">f'<span class="subst">&#123;URL&#125;</span>/v1/read/k?bid=<span class="subst">&#123;bookid&#125;</span>'</span></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    resp = requests.get(url,headers = headers)</span><br><span class="line">    resp.raise_for_status()</span><br><span class="line">  <span class="keyword">except</span> Exception <span class="keyword">as</span> exc:</span><br><span class="line">    print(exc)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">try</span>:</span><br><span class="line">    jdata = resp.json()</span><br><span class="line">  <span class="keyword">except</span> Exception <span class="keyword">as</span> exc:</span><br><span class="line">    jdata = &#123;&#125;</span><br><span class="line"></span><br><span class="line">  res = jdata.get(<span class="string">'data'</span>)</span><br><span class="line">  <span class="keyword">if</span> res <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">    <span class="keyword">raise</span> Exception(<span class="string">'returned None, something is not right...'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p>有了这些我们就可以来轻松的获取图片了</p>
+<p>我们可以发现图片的url规律是</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">URL = <span class="string">'https://lib-nuanxin.wqxuetang.com'</span></span><br><span class="line"><span class="string">f'<span class="subst">&#123;URL&#125;</span>/page/img/<span class="subst">&#123;bookid&#125;</span>/<span class="subst">&#123;page&#125;</span>?k=<span class="subst">&#123;token&#125;</span>'</span></span><br></pre></td></tr></table></figure>
+<p>然后就可以来获取图片了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fetch_png</span><span class="params">(bookid, page)</span>:</span></span><br><span class="line">  <span class="string">''' download book page img '''</span></span><br><span class="line">  token = gen_jwt_token(bookid, page)</span><br><span class="line">  print(token)</span><br><span class="line">  url = <span class="string">f'<span class="subst">&#123;URL&#125;</span>/page/img/<span class="subst">&#123;bookid&#125;</span>/<span class="subst">&#123;page&#125;</span>?k=<span class="subst">&#123;token&#125;</span>'</span></span><br><span class="line">  print(url)</span><br><span class="line">  headers = &#123;</span><br><span class="line">    <span class="string">'accept'</span>: <span class="string">'image / webp, image / *, * / *;q = 0.8'</span>,</span><br><span class="line">    <span class="string">'referer'</span>: <span class="string">f'<span class="subst">&#123;URL&#125;</span>/read/pdf/<span class="subst">&#123;bookid&#125;</span>'</span>,</span><br><span class="line">    <span class="string">'user-agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; WOW64)    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'</span>,</span><br><span class="line">  &#125;</span><br><span class="line">  req = requests.get(url,headers=headers)</span><br><span class="line">  res = req.content</span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(str(bookid)):</span><br><span class="line">    os.mkdir(str(bookid))</span><br><span class="line">  <span class="keyword">with</span> open(str(bookid)+<span class="string">'/'</span>+str(page)+<span class="string">'.jpg'</span>,<span class="string">'wb'</span>)<span class="keyword">as</span> f:</span><br><span class="line">      f.write(res)</span><br></pre></td></tr></table></figure>
+<p>当我们获取到书的所有图片如图：</p>
+<p><img src="http://q4uie93wz.bkt.clouddn.com/20200203120623653/20200204042704956.png" alt=""></p>
+<p>然后我们再用python将这些图片合成一个完整的pdf</p>
+<p>具体代码如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"><span class="comment"># Author:windknew</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">from</span> reportlab.lib.units <span class="keyword">import</span> mm, inch</span><br><span class="line"><span class="keyword">from</span> reportlab.lib.pagesizes <span class="keyword">import</span> A4,A5, landscape</span><br><span class="line"><span class="keyword">from</span> reportlab.pdfgen <span class="keyword">import</span> canvas</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 图片文件名称列表</span></span><br><span class="line">IMAGEFILES = []</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">convertpdf</span><span class="params">(pdfFile)</span>:</span></span><br><span class="line">  <span class="string">'''多个图片合成一个pdf文件'''</span></span><br><span class="line">  (w, h) = landscape(A5) <span class="comment">#</span></span><br><span class="line">  cv = canvas.Canvas(pdfFile,pagesize=landscape(A5))</span><br><span class="line">  <span class="keyword">for</span> imagePath <span class="keyword">in</span> IMAGEFILES:</span><br><span class="line">     print(imagePath)</span><br><span class="line">     cv.drawImage(imagePath, <span class="number">0</span>, <span class="number">0</span>, w, h)</span><br><span class="line">     cv.showPage()</span><br><span class="line">  cv.save()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getListImages</span><span class="params">(dirPath)</span>:</span></span><br><span class="line">  <span class="string">'''读取指定文件夹下所有的JPEG图片，存入列表'''</span></span><br><span class="line">  <span class="keyword">if</span> dirPath <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">or</span> len(dirPath) == <span class="number">0</span>:</span><br><span class="line">     <span class="keyword">raise</span> ValueError(<span class="string">'dirPath不能为空，该值为存放图片的具体路径文件夹！'</span>)</span><br><span class="line">  <span class="keyword">if</span> os.path.isfile(dirPath):</span><br><span class="line">     <span class="keyword">raise</span> ValueError(<span class="string">'dirPath不能为具体文件，该值为存放图片的具体路径文件夹！'</span>)</span><br><span class="line">  <span class="keyword">if</span> os.path.isdir(dirPath):</span><br><span class="line">     <span class="keyword">for</span> imageName <span class="keyword">in</span> os.listdir(dirPath):</span><br><span class="line">        <span class="keyword">if</span> imageName.endswith(<span class="string">'.jpg'</span>) <span class="keyword">or</span>   imageName.endswith(<span class="string">'.jpeg'</span>):</span><br><span class="line">           absPath =converPath(dirPath) + imageName</span><br><span class="line">           IMAGEFILES.append(absPath)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">converPath</span><span class="params">(dirPath)</span>:</span></span><br><span class="line">  <span class="keyword">if</span> dirPath <span class="keyword">is</span> <span class="keyword">None</span> <span class="keyword">or</span> len(dirPath) == <span class="number">0</span>:</span><br><span class="line">     <span class="keyword">raise</span> ValueError(<span class="string">'dirPath不能为空！'</span>)</span><br><span class="line">  <span class="keyword">if</span> os.path.isfile(dirPath):</span><br><span class="line">     <span class="keyword">raise</span> ValueError(<span class="string">'dirPath不能为具体文件，该值为文件夹路径！'</span>)</span><br><span class="line">  <span class="keyword">if</span> <span class="keyword">not</span> str(dirPath).endswith(<span class="string">"\\"</span>):</span><br><span class="line">     <span class="keyword">return</span> dirPath + <span class="string">"\\"</span></span><br><span class="line">  <span class="keyword">return</span> dirPath</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    getListImages(<span class="string">'C:/Users/lyh/Desktop/ershoushu/2175744/'</span>)</span><br><span class="line">    pdfFile = converPath(<span class="string">'C:/Users/lyh/Desktop/ershoushu/2175744/'</span>)+<span class="string">'2175744'</span>+ <span class="string">".pdf"</span></span><br><span class="line">    convertpdf(pdfFile)</span><br></pre></td></tr></table></figure>
+<h1 id="结语总结"><a href="#结语总结" class="headerlink" title="结语总结"></a>结语总结</h1><p>   这样我们就成功的获取到了一本想要的pdf，但是文泉课堂不知什么原因有时候就会502，这样的话我们就需要多爬几次，直到把整本书的img都抓到，这次分享就到这儿了</p>
 
       </div>
       
@@ -458,10 +472,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-03T15:27:40+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-04T17:22:19+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>更新于 2020年2月3日</p>
+    <p>更新于 2020年2月4日</p>
   </a>
 </div>
 
@@ -470,7 +484,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/hexo-blog/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>hexo,blog</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/爬虫，python/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>爬虫，python</p></a></div>
 
 
         
@@ -483,7 +497,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknows.com/hexo/&title=使用hexo 搭建博客(一) | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknows.com/spider-wenquanketang/&title=文泉课堂知识库图书爬虫 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -495,7 +509,7 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknows.com/hexo/&title=使用hexo 搭建博客(一) | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknows.com/spider-wenquanketang/&title=文泉课堂知识库图书爬虫 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -505,7 +519,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzElEQVR42u3aQRKDMAwEQf7/afIACJmVkANV41MOxLQ5uKS1tw2P/TD4v65n2yaGXLly29z9cnx78bdXHv91jeYGuXLlruem03E6XxjaCuXKlftILgGly5MrV+57ueQ3aWnkypX7Fi5pfkixUotFRno1uXLlNrhp9DnxeyTflStXbom7l0ZtYWlIevJeuXLlLuHWGhsefV4vj5RTJ/PIlSt3mEuOVDmFN048Qj35rnLlyh3mpkFG/64UfybuyeTKlXsrt3YxohZt8CYHVWRy5cod4KaU9EIGKYCCzyRXrtw/cTtVUu2AlixSrly5T+DWLl3xYqV1T0SuXLlLuEGf1A5WeOxyw1GKXLlyG7EiL2t4+ZI2P8FVD7ly5Q5z+WWLtIHhcQn5HHLlyl3JJeVFLfRMr18EpZVcuXKHuZ0iJg41wtIHHbLKlSt3gEu2rdpW1bmo8WPxcuXKHebu4ahFKmnBhPIbuXLljnHTAxISid51DauFlitXbptLNq/adpNevAhSXrly5S7h1tJWdIqLj1LQzHLlyn0Yl4SnZAtLN7IgrZErV+5ybopLn0Ebn1y5chdya81Piui0SXLlyl3JTae768naEa9cuXKHuR/QTZ9mcOM7FQAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aQXKkMAwF0L7/pcl2FtPOlwSpwn5epQhgnhdqyfLnE4/rn7G+/u3O9Zt7z5YHBgbGaxnXclQZObJ3/euMGBgYBzCSULh+9be3JQF0Pdf6fgwMDIzep+Qp4JqNgYGBcW/AzRO+vADGwMDAqBax6xflQXn9/sdrcQwMjBcyetv3f/P3I/0NDAyMVzGu4sgDaPLfXtL5n3diYGBszZikdPPt/kKBmhz+wMDAOIBRPe4waUNWS+WoYMbAwDiAkQS+pEnZ++heOzP63cDAwNiUkTcRbwuXxRbmp7rqGBgYr2XkKdpkNz5PQJtHQDAwMLZm3PuJdzVE8425zxMrjYGB8UJG3nRMkry77i8HXAwMjE0Z1S22SVKYzJIvNAYGxk6MJAj2CstqmVrdvPvlmAUGBsZ2jF7yN9/Qz58q/D5gYGBsx5g83AuRefn64JkRDAyMVzHyiXstgWTLrJeMYmBgnMOopl+TNK63BLdluxgYGC9nXK1xb1NhcgUDA+M0Rj5lL9T2jl9EiSkGBsYBjOr01cZkcsArPxtSbmRiYGBsyqgejJiUwVGTMkkNMTAwtmNMCtdJodtLGaPcFgMDYztGPp4rYntBOV8sDAyMPRjVja1qUTppDxQCLgYGxgGMajOyCp4cvIgWCAMDAyMOiJONs7zlUM5MMTAwjmRMmgc98KgTi4GBsQUjKWLz8Fo9/lXd+sfAwDiNUQ151Q/qBdxeaY2BgbEd4wfZ91WD1oCxaAAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -515,7 +529,7 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://www.windknows.com/hexo/&title=使用hexo 搭建博客(一) | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://service.weibo.com/share/share.php?url=http://www.windknows.com/spider-wenquanketang/&title=文泉课堂知识库图书爬虫 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -525,7 +539,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzElEQVR42u3aQRKDMAwEQf7/afIACJmVkANV41MOxLQ5uKS1tw2P/TD4v65n2yaGXLly29z9cnx78bdXHv91jeYGuXLlruem03E6XxjaCuXKlftILgGly5MrV+57ueQ3aWnkypX7Fi5pfkixUotFRno1uXLlNrhp9DnxeyTflStXbom7l0ZtYWlIevJeuXLlLuHWGhsefV4vj5RTJ/PIlSt3mEuOVDmFN048Qj35rnLlyh3mpkFG/64UfybuyeTKlXsrt3YxohZt8CYHVWRy5cod4KaU9EIGKYCCzyRXrtw/cTtVUu2AlixSrly5T+DWLl3xYqV1T0SuXLlLuEGf1A5WeOxyw1GKXLlyG7EiL2t4+ZI2P8FVD7ly5Q5z+WWLtIHhcQn5HHLlyl3JJeVFLfRMr18EpZVcuXKHuZ0iJg41wtIHHbLKlSt3gEu2rdpW1bmo8WPxcuXKHebu4ahFKmnBhPIbuXLljnHTAxISid51DauFlitXbptLNq/adpNevAhSXrly5S7h1tJWdIqLj1LQzHLlyn0Yl4SnZAtLN7IgrZErV+5ybopLn0Ebn1y5chdya81Piui0SXLlyl3JTae768naEa9cuXKHuR/QTZ9mcOM7FQAAAABJRU5ErkJggg=='>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aQXKkMAwF0L7/pcl2FtPOlwSpwn5epQhgnhdqyfLnE4/rn7G+/u3O9Zt7z5YHBgbGaxnXclQZObJ3/euMGBgYBzCSULh+9be3JQF0Pdf6fgwMDIzep+Qp4JqNgYGBcW/AzRO+vADGwMDAqBax6xflQXn9/sdrcQwMjBcyetv3f/P3I/0NDAyMVzGu4sgDaPLfXtL5n3diYGBszZikdPPt/kKBmhz+wMDAOIBRPe4waUNWS+WoYMbAwDiAkQS+pEnZ++heOzP63cDAwNiUkTcRbwuXxRbmp7rqGBgYr2XkKdpkNz5PQJtHQDAwMLZm3PuJdzVE8425zxMrjYGB8UJG3nRMkry77i8HXAwMjE0Z1S22SVKYzJIvNAYGxk6MJAj2CstqmVrdvPvlmAUGBsZ2jF7yN9/Qz58q/D5gYGBsx5g83AuRefn64JkRDAyMVzHyiXstgWTLrJeMYmBgnMOopl+TNK63BLdluxgYGC9nXK1xb1NhcgUDA+M0Rj5lL9T2jl9EiSkGBsYBjOr01cZkcsArPxtSbmRiYGBsyqgejJiUwVGTMkkNMTAwtmNMCtdJodtLGaPcFgMDYztGPp4rYntBOV8sDAyMPRjVja1qUTppDxQCLgYGxgGMajOyCp4cvIgWCAMDAyMOiJONs7zlUM5MMTAwjmRMmgc98KgTi4GBsQUjKWLz8Fo9/lXd+sfAwDiNUQ151Q/qBdxeaY2BgbEd4wfZ91WD1oCxaAAAAABJRU5ErkJggg=='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -547,25 +561,25 @@
       
           <div class="prev-next">
               
-                  <section class="prev">
-                      <span class="art-item-left">
-                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/hexo-1/" rel="prev" title="使用hexo搭建博客（二）">
-                                
-                                    使用hexo搭建博客（二）
-                                
+                              <a href="/hexo-3/" rel="prev" title="使用hexo搭建博客（四）">
+                                  
+                                      使用hexo搭建博客（四）
+                                  
                               </a>
                           </h4>
                           
                               
                               <h6 class="tags">
-                                  <a class="tag" href="/blog/tags/hexo，blog/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> hexo，blog</a>
+                                  <a class="tag" href="/blog/tags/hexo-blog/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> hexo,blog</a>
                               </h6>
                           
                       </span>
                   </section>
-              
               
           </div>
       
@@ -605,7 +619,7 @@
 
   <script>
     window.subData = {
-      title: '使用hexo 搭建博客(一)',
+      title: '文泉课堂知识库图书爬虫',
       tools: true
     }
   </script>
@@ -767,7 +781,7 @@
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用Hexo搭建博客（一）"><span class="toc-text">使用Hexo搭建博客（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言："><span class="toc-text">引言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-说明"><span class="toc-text">Hexo 说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备环境"><span class="toc-text">准备环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地启动"><span class="toc-text">本地启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建页面和文章"><span class="toc-text">新建页面和文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑文章"><span class="toc-text">编辑文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown文章编辑"><span class="toc-text">Markdown文章编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令总结"><span class="toc-text">常用命令总结</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-text">思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#过程"><span class="toc-text">过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#里面的数据："><span class="toc-text">里面的数据：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#结语总结"><span class="toc-text">结语总结</span></a></li></ol>
     </div>
   </section>
 
