@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>java学习第一天</title>
+      <link href="/java/"/>
+      <url>/java/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a><strong>前言</strong></h1><p>​    下学期要学习java，闲来无事，开始了自学之旅，用于记录学习java的全过程，当是学习笔记吧</p><h1 id="什么是java，以及java发展史"><a href="#什么是java，以及java发展史" class="headerlink" title="什么是java，以及java发展史"></a><strong>什么是java，以及java发展史</strong></h1><h2 id="什么是java语言"><a href="#什么是java语言" class="headerlink" title="什么是java语言"></a><strong>什么是java语言</strong></h2><p>Java语言是美国Sun公司（Stanford University Network）斯坦福大学网络公司，在1995年推出的高级编程语言，所谓编程语言，是计算机的语言，人门可以使用编程语言对计算机下达命令，让计算机完成人门需要的功能</p><p>Java语言之父James Gosling就是这家公司非常nb的程序员，关于java之父的详细了解，可以看看以下这篇文章</p><p>​       <a href="http://www.elecfans.com/d/633774.html" target="_blank" rel="noopener">java之父及java诞生</a></p><p><img src="http://q4uie93wz.bkt.clouddn.com/java/20200206045310571.png" alt=""></p><p>​                                              java语言之父 James Gosling</p><h2 id="Java发展史"><a href="#Java发展史" class="headerlink" title="Java发展史"></a>Java发展史</h2><ul><li>1995年Sun公司发布java1.0版本</li><li>1997年发布java1.1版本</li><li>1998年发布java1.2版本</li><li>2000年发布java1.3版本</li><li>2002年发布java1.4版本</li><li>2004年发布java5版本（因为和1.4变化太大，更新力度太大，所以用大版版本号来表示）</li><li>2006年发布java6版本</li><li>2009年Oracle甲骨文公司收购Sun公司，并于2011年发布java7版本</li><li>2014年发布java8版本</li><li>2017年9月发布java9版本</li><li>2018年3月发布java10版本</li></ul><h2 id="Java的应用"><a href="#Java的应用" class="headerlink" title="Java的应用"></a>Java的应用</h2><p>Java语言经过多年的发展已经形成了一个较为健全的语言生态，在Web开发、大数据开发、Android开发等领域均有广泛的应用，而且凭借稳定的性能表现和较强的扩展性，目前Java语言依然是大型互联网平台较为常见的解决方案，采用Java语言进行大型后端系统的开发会在很大程度上降低开发风险。JAVA的一次编译，到处运行，你知道多少？](<a href="https://blog.csdn.net/wangyongxia921/article/details/28117155" target="_blank" rel="noopener">https://blog.csdn.net/wangyongxia921/article/details/28117155</a>)</p><h2 id="Java环境的搭建"><a href="#Java环境的搭建" class="headerlink" title="Java环境的搭建"></a>Java环境的搭建</h2><ul><li><strong>JVM</strong> (java Virtual Machine):java虚拟机，简称JVM，是运行所有java程序的假想计算机，是java程序的运行环境，是java最具吸引力的特性之一，我们编写的JVM之上</li><li><strong>跨平台</strong>：任何软件的运行，都必须要运行在操作系统之上，而我们用Java编写的软件可以运行在任何的操作系统上，这个特性称为java语言的跨平台特性，该特性是由JVM实现的，我们编写的程序运行在JVM上，而JVM运行在操作系统上（这就是著名的‘一次编写，到处运行’）可以看看这篇文章<a href="https://blog.csdn.net/wangyongxia921/article/details/28117155" target="_blank" rel="noopener">JAVA的一次编译，到处运行，你知道多少？</a></li></ul><p>​           <img src="http://q4uie93wz.bkt.clouddn.com/java/20200206052004691.png" alt=""></p><h3 id="JRE和JDK"><a href="#JRE和JDK" class="headerlink" title="JRE和JDK"></a><strong>JRE和JDK</strong></h3><ul><li><strong>JRE</strong> (java Runtime Environment) :是java程序的运行时环境，包含JVM和运行时所需要的核心类库</li><li><strong>JDK</strong> (java Development Kit):是java程序开发工具包，包含JRE和开发人员使用的工具</li></ul><p>我们想要运行一个已有的java程序，那么只需要安装JRE即可</p><p>我们想要开发一个全新的java程序，那么必须安装JDK</p><p>JDK，JRE，JVM关系图</p><p><img src="http://q4uie93wz.bkt.clouddn.com/20200206172646684/20200206052700258.png" alt=""></p><p>下载安装<a href="https://www.oracle.com/technetwork/java/javase/archive-139210.html" target="_blank" rel="noopener">JDK</a></p><p><img src="http://q4uie93wz.bkt.clouddn.com/20200206172646684/20200206053424799.png" alt=""></p><p>可以选择不同的版本号,(我无论什么都喜欢下载最新的我下载的是最新的)</p><p>选择相应的java版本，点进去</p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580981715514.png" alt="1580981715514"></p><p>选择相应系统的jdk点击下载</p><p>下载成功之后点击安装</p><p><img src="http://q4uie93wz.bkt.clouddn.com/20200206172646684/20200206054114831.png" alt=""></p><p><strong>注意这个路径问题</strong></p><h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>将我们的jdk安装的bin目录添加到环境变量path里</p><p><img src="http://q4uie93wz.bkt.clouddn.com/20200206172646684/20200206054828671.png" alt=""></p><p>然后打开cmd测试</p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580982637728.png" alt="1580982637728"></p><p>这样就说明，jdk环境变量配好了</p><h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h2><p>新建一个文本文档，命名为HelloWorld.java</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello,World"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580983459688.png" alt="1580983459688"></p><p>执行javac 编译HelloWorld.java执行后什么都不出现，同目录下会出现.class的字节码文件</p><p><img src="http://q4uie93wz.bkt.clouddn.com/20200206172646684/20200206060318866.png" alt=""></p><p>然后java  HelloWorld 就能成功执行该文件</p><p><img src="C:\Users\lyh\AppData\Roaming\Typora\typora-user-images\1580984557635.png" alt="1580984557635"></p><p><strong>注意用的是java HelloWorld，java后面一个空格，加不加后缀的文件名</strong></p><p>今天就学了这么多，明天再学变量什么的，</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习，java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>文泉课堂爬虫源码</title>
       <link href="/wenquanketang-spider/"/>
       <url>/wenquanketang-spider/</url>
@@ -170,22 +197,22 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>我的朋友们</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[<div class="style-example example"><ul class="pure circle center about"><li><img src="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg"></li></ul><center><a href="https://github.com/xaoxuu" target="_blank" rel="noopener"><i class="fab fa-github"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://xaoxuu.com/blog/" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://instagram.com/xaoxuu" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://music.163.com/#/user/home?id=63035382" target="_blank" rel="noopener"><i class="fas fa-headphones"></i></a></center><p><hr></p><center>这是第一次搭建的博客，请随意留言，但是我不会回复<br><span><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/滑稽.png"><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/滑稽.png"><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/滑稽.png"></span></center></div><h4 id="One-More-Thing"><a href="#One-More-Thing" class="headerlink" title="One More Thing"></a>One More Thing</h4><p>懒加载占位图如果喜欢请拿去：<a href="https://img.vim-cn.com/92/d570170f4f12e1ee829ca0e85a7dffeb77343a.svg" target="_blank" rel="noopener">图片链接</a></p><p><br><hr></p><center>欢迎灌水</center><p><br></p><iframe src="//player.bilibili.com/player.html?aid=52012946&cid=91055960&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500px"> </iframe>]]></content>
+        <content type="html"><![CDATA[<p><br></p><p>各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～</p><blockquote><p>名称： 风晓博客<br>头像：  <a href="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg" target="_blank" rel="noopener">http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg</a><br>网址： <a href="https://www.windknows.com">https://www.windknows.com</a><br>标签： iOS</p></blockquote>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>我的朋友们</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<p><br></p><p>各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～</p><blockquote><p>名称： 风晓博客<br>头像：  <a href="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg" target="_blank" rel="noopener">http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg</a><br>网址： <a href="https://www.windknows.com">https://www.windknows.com</a><br>标签： iOS</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<div class="style-example example"><ul class="pure circle center about"><li><img src="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg"></li></ul><center><a href="https://github.com/xaoxuu" target="_blank" rel="noopener"><i class="fab fa-github"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://xaoxuu.com/blog/" target="_blank" rel="noopener"><i class="fas fa-rss"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://instagram.com/xaoxuu" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://music.163.com/#/user/home?id=63035382" target="_blank" rel="noopener"><i class="fas fa-headphones"></i></a></center><p><hr></p><center>这是第一次搭建的博客，请随意留言，但是我不会回复<br><span><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/滑稽.png"><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/滑稽.png"><img class="emoji tieba" src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0/img/tieba/滑稽.png"></span></center></div><h4 id="One-More-Thing"><a href="#One-More-Thing" class="headerlink" title="One More Thing"></a>One More Thing</h4><p>懒加载占位图如果喜欢请拿去：<a href="https://img.vim-cn.com/92/d570170f4f12e1ee829ca0e85a7dffeb77343a.svg" target="_blank" rel="noopener">图片链接</a></p><p><br><hr></p><center>欢迎灌水</center><p><br></p><iframe src="//player.bilibili.com/player.html?aid=52012946&cid=91055960&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="500px"> </iframe>]]></content>
       
     </entry>
     
@@ -203,9 +230,9 @@
     
     
     <entry>
-      <title>所有标签</title>
-      <link href="/blog/tags/index.html"/>
-      <url>/blog/tags/index.html</url>
+      <title>所有分类</title>
+      <link href="/blog/categories/index.html"/>
+      <url>/blog/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -214,9 +241,9 @@
     
     
     <entry>
-      <title>所有分类</title>
-      <link href="/blog/categories/index.html"/>
-      <url>/blog/categories/index.html</url>
+      <title>所有标签</title>
+      <link href="/blog/tags/index.html"/>
+      <url>/blog/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
