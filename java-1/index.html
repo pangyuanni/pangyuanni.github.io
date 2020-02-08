@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>在家学习java第二天 | 风晓博客</title>
+  <title>在家学习java第二天（常量和变量） | 风晓博客</title>
   
   
   <meta name="description" content="一个喜欢瞎玩的博主">
@@ -310,7 +310,7 @@
   
     <h1 class="title">
       <a href="/java-1/">
-        在家学习java第二天
+        在家学习java第二天（常量和变量）
       </a>
     </h1>
   
@@ -515,12 +515,32 @@
 <li><p>一步到位</p>
 <ul>
 <li><p><strong>数据类型  变量名称 = 数据值</strong>；//在创建变量同时，立刻放入指定的数据值</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Day02</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//方式一</span></span><br><span class="line">	<span class="keyword">int</span> num1;</span><br><span class="line">	num1 =<span class="number">10</span>;</span><br><span class="line">	System.out.println(num1);</span><br><span class="line">    <span class="comment">//方式二</span></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">25</span>;</span><br><span class="line">    System.out.println(num2);</span><br><span class="line">    System.out.println(<span class="string">"--------------"</span>);</span><br><span class="line">    <span class="keyword">byte</span> num3 = <span class="number">30</span>; <span class="comment">//注意右侧数值不能超过左侧数据类型的数据范围</span></span><br><span class="line">    System.out.println(num3);</span><br><span class="line">    <span class="comment">//byte num4 = 400;// 右侧超出了byte的取值范围，错误！！</span></span><br><span class="line">    <span class="keyword">short</span> num5 = <span class="number">50</span>;</span><br><span class="line">    System.out.println(num5);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">long</span> num6 = <span class="number">3000000L</span>;</span><br><span class="line">    System.out.println(num6);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">float</span> num7 = <span class="number">2.5F</span>;</span><br><span class="line">    System.out.println(num7);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">double</span>  num8 = <span class="number">1.2</span>;</span><br><span class="line">    System.out.println(num8);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> zifu1 = <span class="string">'A'</span>;</span><br><span class="line">    System.out.println(zifu1);</span><br><span class="line"></span><br><span class="line">    zifu1 = <span class="string">'中'</span>;</span><br><span class="line">    System.out.println(zifu1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">boolean</span> var1 = <span class="keyword">true</span>;</span><br><span class="line">    System.out.println(var1);</span><br><span class="line"></span><br><span class="line">    var1 = <span class="keyword">false</span>;</span><br><span class="line">    System.out.println(var1);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Day02</span></span>&#123;</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ol>
-<p><strong>TIPS</strong></p>
+<pre><code> //方式一
+int num1;
+num1 =10;
+</code></pre><p>   System.out.println(num1);<br>    //方式二<br>    int num2 = 25;<br>    System.out.println(num2);<br>    System.out.println(“————–”);<br>    byte num3 = 30; //注意右侧数值不能超过左侧数据类型的数据范围<br>    System.out.println(num3);<br>    //byte num4 = 400;// 右侧超出了byte的取值范围，错误！！<br>    short num5 = 50;<br> System.out.println(num5);</p>
+<pre><code>long num6 = 3000000L;
+</code></pre><p> System.out.println(num6);</p>
+<pre><code>float num7 = 2.5F;
+</code></pre><p> System.out.println(num7);</p>
+<pre><code>double  num8 = 1.2;
+</code></pre><p> System.out.println(num8);</p>
+<pre><code>char zifu1 = &apos;A&apos;;
+</code></pre><p> System.out.println(zifu1);</p>
+<pre><code>zifu1 = &apos;中&apos;;
+</code></pre><p> System.out.println(zifu1);</p>
+<pre><code>boolean var1 = true;
+</code></pre><p> System.out.println(var1);</p>
+<pre><code>var1 = false;
+</code></pre><p> System.out.println(var1);</p>
+<p>}<br>   }</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+</code></pre><p><strong>TIPS</strong></p>
 <ul>
 <li>变量之间不能重复</li>
 <li>对于float和long后缀不能丢掉</li>
@@ -590,10 +610,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-07T12:21:32+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-08T10:54:46+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>更新于 2020年2月7日</p>
+    <p>更新于 2020年2月8日</p>
   </a>
 </div>
 
@@ -615,7 +635,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknows.com/java-1/&title=在家学习java第二天 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknows.com/java-1/&title=在家学习java第二天（常量和变量） | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -627,7 +647,7 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknows.com/java-1/&title=在家学习java第二天 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknows.com/java-1/&title=在家学习java第二天（常量和变量） | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -647,7 +667,7 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://www.windknows.com/java-1/&title=在家学习java第二天 | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://service.weibo.com/share/share.php?url=http://www.windknows.com/java-1/&title=在家学习java第二天（常量和变量） | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -679,14 +699,33 @@
       
           <div class="prev-next">
               
+                  <section class="prev">
+                      <span class="art-item-left">
+                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                          <h4>
+                              <a href="/java-2/" rel="prev" title="在家学习lava第三天（类和对象）">
+                                
+                                    在家学习lava第三天（类和对象）
+                                
+                              </a>
+                          </h4>
+                          
+                              
+                              <h6 class="tags">
+                                  <a class="tag" href="/blog/tags/学习，java/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 学习，java</a>
+                              </h6>
+                          
+                      </span>
+                  </section>
+              
               
                   <section class="next">
                       <span class="art-item-right" aria-hidden="true">
                           <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/java/" rel="prev" title="在家java学习第一天">
+                              <a href="/java/" rel="prev" title="在家java学习第一天（java认识和环境搭建）">
                                   
-                                      在家java学习第一天
+                                      在家java学习第一天（java认识和环境搭建）
                                   
                               </a>
                           </h4>
@@ -737,7 +776,7 @@
 
   <script>
     window.subData = {
-      title: '在家学习java第二天',
+      title: '在家学习java第二天（常量和变量）',
       tools: true
     }
   </script>
@@ -1070,9 +1109,9 @@
     <div class='content material'>
       <ul class="entry">
         
-          <li><a class="flat-box" title="/blog/categories/java/" href="/blog/categories/java/"><div class='name'>java</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box" title="/blog/categories/java/" href="/blog/categories/java/"><div class='name'>java</div><div class='badge'>(6)</div></a></li>
         
-          <li><a class="flat-box child" title="/blog/categories/java/教程/" href="/blog/categories/java/教程/"><div class='name'>教程</div><div class='badge'>(2)</div></a></li>
+          <li><a class="flat-box child" title="/blog/categories/java/教程/" href="/blog/categories/java/教程/"><div class='name'>教程</div><div class='badge'>(6)</div></a></li>
         
           <li><a class="flat-box" title="/blog/categories/python/" href="/blog/categories/python/"><div class='name'>python</div><div class='badge'>(1)</div></a></li>
         
@@ -1133,7 +1172,7 @@
 </header>
 
     <div class='content material'>
-      <a href="/blog/tags/hexo-blog/" style="font-size: 24px; color: #555">hexo,blog</a> <a href="/blog/tags/hexo，blog/" style="font-size: 14px; color: #999">hexo，blog</a> <a href="/blog/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/blog/tags/学习，java/" style="font-size: 19px; color: #777">学习，java</a> <a href="/blog/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/blog/tags/爬虫，python/" style="font-size: 14px; color: #999">爬虫，python</a>
+      <a href="/blog/tags/hexo-blog/" style="font-size: 24px; color: #555">hexo,blog</a> <a href="/blog/tags/hexo，blog/" style="font-size: 14px; color: #999">hexo，blog</a> <a href="/blog/tags/java/" style="font-size: 24px; color: #555">java</a> <a href="/blog/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/blog/tags/学习/" style="font-size: 24px; color: #555">学习</a> <a href="/blog/tags/学习，java/" style="font-size: 24px; color: #555">学习，java</a> <a href="/blog/tags/爬虫/" style="font-size: 14px; color: #999">爬虫</a> <a href="/blog/tags/爬虫，python/" style="font-size: 14px; color: #999">爬虫，python</a>
     </div>
   </section>
 
