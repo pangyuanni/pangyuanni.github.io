@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.windknows.com/hexo-3/</loc>
+    
+    <lastmod>2020-02-10T07:59:38.063Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknows.com/hexo-2/</loc>
+    
+    <lastmod>2020-02-10T07:59:27.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknows.com/hexo-1/</loc>
+    
+    <lastmod>2020-02-10T07:59:13.668Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknows.com/hexo/</loc>
+    
+    <lastmod>2020-02-10T07:59:01.618Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.windknows.com/java-5/</loc>
     
     <lastmod>2020-02-08T04:25:02.803Z</lastmod>
@@ -54,34 +82,6 @@
     <loc>http://www.windknows.com/spider-wenquanketang/</loc>
     
     <lastmod>2020-02-04T09:22:19.439Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknows.com/hexo-1/</loc>
-    
-    <lastmod>2020-02-03T07:37:12.419Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknows.com/hexo-3/</loc>
-    
-    <lastmod>2020-02-03T07:36:26.239Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknows.com/hexo/</loc>
-    
-    <lastmod>2020-02-03T07:27:40.688Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknows.com/hexo-2/</loc>
-    
-    <lastmod>2020-02-03T07:23:43.421Z</lastmod>
     
   </url>
   
