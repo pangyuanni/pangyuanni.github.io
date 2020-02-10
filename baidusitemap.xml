@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.windknows.com/hexo/</loc>
+    <lastmod>2020-02-10</lastmod>
+  </url>  <url>
     <loc>http://www.windknows.com/wenquanketang-spider/</loc>
     <lastmod>2020-02-10</lastmod>
   </url>  <url>
@@ -14,9 +17,6 @@
     <lastmod>2020-02-10</lastmod>
   </url>  <url>
     <loc>http://www.windknows.com/hexo-1/</loc>
-    <lastmod>2020-02-10</lastmod>
-  </url>  <url>
-    <loc>http://www.windknows.com/hexo/</loc>
     <lastmod>2020-02-10</lastmod>
   </url>  <url>
     <loc>http://www.windknows.com/java-5/</loc>
