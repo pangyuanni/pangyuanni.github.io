@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://www.windknows.com/java-6/</loc>
+    <loc>http://www.windknows.com/java-1/</loc>
+    <lastmod>2020-02-13</lastmod>
+  </url>  <url>
+    <loc>http://www.windknows.com/java-2/</loc>
     <lastmod>2020-02-13</lastmod>
   </url>  <url>
     <loc>http://www.windknows.com/java-3/</loc>
@@ -13,19 +16,16 @@
     <loc>http://www.windknows.com/java-5/</loc>
     <lastmod>2020-02-13</lastmod>
   </url>  <url>
+    <loc>http://www.windknows.com/java-6/</loc>
+    <lastmod>2020-02-13</lastmod>
+  </url>  <url>
+    <loc>http://www.windknows.com/java/</loc>
+    <lastmod>2020-02-13</lastmod>
+  </url>  <url>
     <loc>http://www.windknows.com/wenquanketang-spider/</loc>
     <lastmod>2020-02-10</lastmod>
   </url>  <url>
     <loc>http://www.windknows.com/spider-wenquanketang/</loc>
-    <lastmod>2020-02-10</lastmod>
-  </url>  <url>
-    <loc>http://www.windknows.com/java-2/</loc>
-    <lastmod>2020-02-10</lastmod>
-  </url>  <url>
-    <loc>http://www.windknows.com/java-1/</loc>
-    <lastmod>2020-02-10</lastmod>
-  </url>  <url>
-    <loc>http://www.windknows.com/java/</loc>
     <lastmod>2020-02-10</lastmod>
   </url>  <url>
     <loc>http://www.windknows.com/hexo-3/</loc>
