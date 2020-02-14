@@ -218,9 +218,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 爬虫 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -245,9 +245,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 爬虫 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -378,6 +378,17 @@
     
     
     <entry>
+      <title></title>
+      <link href="/projects/index.html"/>
+      <url>/projects/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -400,9 +411,9 @@
     
     
     <entry>
-      <title></title>
-      <link href="/projects/index.html"/>
-      <url>/projects/index.html</url>
+      <title>所有分类</title>
+      <link href="/blog/categories/index.html"/>
+      <url>/blog/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -414,17 +425,6 @@
       <title>所有标签</title>
       <link href="/blog/tags/index.html"/>
       <url>/blog/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>所有分类</title>
-      <link href="/blog/categories/index.html"/>
-      <url>/blog/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
