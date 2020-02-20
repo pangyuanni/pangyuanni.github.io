@@ -88,12 +88,12 @@ html{
 **坐标：山东济南**
 **QQ: 1396902579**
 **微信：1396902579**
-**博客：121.36.63.14**
+**博客：http://www.windknew.com**
 **Github:http://www.github.com/pangyuanni**
 ## 技能介绍
 1 python
 2 爬虫
-3 简单Html/5
+3 简单Html5
 4 简单vue.js
 `
     var changeCode = window.changeCode = `
