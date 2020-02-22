@@ -401,17 +401,6 @@
     
     
     <entry>
-      <title>我的朋友们</title>
-      <link href="/friends/index.html"/>
-      <url>/friends/index.html</url>
-      
-        <content type="html"><![CDATA[<p><br></p><p>各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～</p><blockquote><p>名称： 风晓博客<br>头像：  <a href="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg" target="_blank" rel="noopener">http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg</a><br>网址： <a href="https://www.windknows.com" target="_blank" rel="noopener">https://www.windknows.com</a><br>标签： iOS</p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/projects/index.html"/>
       <url>/projects/index.html</url>
@@ -423,11 +412,11 @@
     
     
     <entry>
-      <title>所有标签</title>
-      <link href="/blog/tags/index.html"/>
-      <url>/blog/tags/index.html</url>
+      <title>我的朋友们</title>
+      <link href="/friends/index.html"/>
+      <url>/friends/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p><br></p><p>各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～</p><blockquote><p>名称： 风晓博客<br>头像：  <a href="http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg" target="_blank" rel="noopener">http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg</a><br>网址： <a href="https://www.windknows.com" target="_blank" rel="noopener">https://www.windknows.com</a><br>标签： iOS</p></blockquote>]]></content>
       
     </entry>
     
@@ -437,6 +426,17 @@
       <title>所有分类</title>
       <link href="/blog/categories/index.html"/>
       <url>/blog/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>所有标签</title>
+      <link href="/blog/tags/index.html"/>
+      <url>/blog/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
