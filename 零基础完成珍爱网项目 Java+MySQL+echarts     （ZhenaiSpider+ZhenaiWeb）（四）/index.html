@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>风晓博客</title>
+  
+  <meta name="keywords" content="风晓,风晓博客,计算机,爬虫,李永宏,前端,h5,css,vue,springboot,博客,风晓的博客">
+  
+  
+  <meta name="description" content="一个喜欢瞎玩的博主">
+  
+
+  
+  <link rel="alternate" href="/atom.xml" title="风晓博客">
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#C1FFC1">
+  <meta name="msapplication-TileColor" content="#6495ED">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-favicon@19.9.6/browserconfig.xml">
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.10.1/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-favicon@19.9.6/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=">
+  <link rel="mask-icon" color="#1BC3FB" href="http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-favicon@19.9.6/site.webmanifest">
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11.26/css/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  
+  <div class="cover-wrapper">
+    <cover class='cover post half'>
+      
+        
+  <h1 class='title'>风晓</h1>
+
+
+  <div class="m_search">
+    <form name="searchform" class="form u-search-form">
+      <input type="text" class="input u-search-input" placeholder="" />
+      <i class="icon fas fa-search fa-fw"></i>
+    </form>
+  </div>
+
+<div class='menu navgation'>
+  <ul class='h-list'>
+    
+      
+        <li>
+          <a class="nav home" href="/"
+            
+            
+            id="home">
+            <i class='fas fa-rss fa-fw'></i>&nbsp;博文
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/projects/"
+            
+            
+            id="projects">
+            <i class='fas fa-code-branch fa-fw'></i>&nbsp;项目
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/resume/"
+            
+              rel="nofollow"
+            
+            
+            id="resume">
+            <i class='fas fa-link fa-fw'></i>&nbsp;简历
+          </a>
+        </li>
+      
+        <li>
+          <a class="nav home" href="/about/"
+            
+              rel="nofollow"
+            
+            
+            id="about">
+            <i class='fas fa-info-circle fa-fw'></i>&nbsp;关于
+          </a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+    </cover>
+    <header class="l_header material">
+  <div id="loading-bar-wrapper">
+    <div id="loading-bar" class="material"></div>
+  </div>
+
+	<div class='wrapper'>
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href='/' >
+        
+          <img class='logo' src='http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0='/>
+        
+      </a>
+			<div class='menu navgation'>
+				<ul class='h-list'>
+          
+  					
+  						<li>
+								<a class="nav flat-box" href="/"
+                  
+                  
+                  id="home">
+									<i class='fas fa-grin fa-fw'></i>&nbsp;示例
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/categories/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogcategories">
+									<i class='fas fa-folder-open fa-fw'></i>&nbsp;分类
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/tags/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogtags">
+									<i class='fas fa-hashtag fa-fw'></i>&nbsp;标签
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/blog/archives/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="blogarchives">
+									<i class='fas fa-archive fa-fw'></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a class="nav flat-box" href="/taiqiu/"
+                  
+                    rel="nofollow"
+                  
+                  
+                  id="taiqiu">
+									<i class=' fa-fw'></i>&nbsp;游戏—打飞机
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索" />
+						<i class="icon fas fa-search fa-fw"></i>
+					</form>
+				</div>
+			
+			<ul class='switcher h-list'>
+				
+					<li class='s-search'><a class="fas fa-search fa-fw" href='javascript:void(0)'></a></li>
+				
+				<li class='s-menu'><a class="fas fa-bars fa-fw" href='javascript:void(0)'></a></li>
+			</ul>
+		</div>
+
+		<div class='nav-sub container container--flex'>
+			<a class="logo flat-box"></a>
+			<ul class='switcher h-list'>
+				<li class='s-comment'><a class="flat-btn fas fa-comments fa-fw" href='javascript:void(0)'></a></li>
+        
+          <li class='s-toc'><a class="flat-btn fas fa-list fa-fw" href='javascript:void(0)'></a></li>
+        
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu navgation">
+      <ul>
+        
+          
+            <li>
+							<a class="nav flat-box" href="/"
+                
+                
+                id="home">
+								<i class='fas fa-clock fa-fw'></i>&nbsp;近期文章
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/blog/archives/"
+                
+                  rel="nofollow"
+                
+                
+                id="blogarchives">
+								<i class='fas fa-archive fa-fw'></i>&nbsp;文章归档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/taiqiu/"
+                
+                  rel="nofollow"
+                
+                
+                id="taiqiu">
+								<i class='fas fa-link fa-fw'></i>&nbsp;游戏—打飞机
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="https://xaoxuu.com/wiki/material-x/"
+                
+                  rel="nofollow"
+                
+                
+                id="https:xaoxuu.comwikimaterial-x">
+								<i class='fas fa-book fa-fw'></i>&nbsp;主题文档
+							</a>
+            </li>
+          
+            <li>
+							<a class="nav flat-box" href="/about/"
+                
+                  rel="nofollow"
+                
+                
+                id="about">
+								<i class='fas fa-info-circle fa-fw'></i>&nbsp;关于小站
+							</a>
+            </li>
+          
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+<script>setLoadingBarProgress(40);</script>
+
+  </div>
+
+
+  <div class="l_body">
+    <div class='body-wrapper'>
+      <div class='l_main'>
+  
+
+  <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+    
+
+
+  <section class='meta'>
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  
+    <h1 class="title">
+      <a href="/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（四）/">
+        2020-10-19
+      </a>
+    </h1>
+  
+
+
+      
+      <div class='new-meta-box'>
+        
+          
+        
+          
+            
+  <div class='new-meta-item author'>
+    
+      <a href="http://www.windknew.com" rel="nofollow">
+        
+          <img src="http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=">
+        
+        <p>风晓</p>
+      </a>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-10-19</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item browse busuanzi">
+      <a class='notlink'>
+        <i class="fas fa-eye" aria-hidden="true"></i>
+        <p>
+          <span id="busuanzi_value_page_pv">
+            <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+          </span>
+        </p>
+      </a>
+    </div>
+  
+
+
+          
+        
+          
+            
+  
+    <div class="new-meta-item wordcount">
+      <a class='notlink'>
+        <i class="fas fa-keyboard" aria-hidden="true"></i>
+        <p>字数统计:</p>
+        <p>2k字</p>
+      </a>
+    </div>
+    <div class="new-meta-item readtime">
+      <a class='notlink'>
+        <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+        <p>阅读时长≈</p>
+        <p>9分</p>
+      </a>
+    </div>
+  
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>title: 零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（四）<br>date: 2018-07-02 10:34:30<br>tags: </p>
+<ul>
+<li>爬虫</li>
+<li>blog</li>
+</ul>
+<p>上次我们的爬虫已经完成了 接下来呢 就是我们的报表。</p>
+<p>我们用的是网页形式来展示，所以呢我们需要搭建一个本地的服务器。我们使用的是tomcat</p>
+<h2 id="1，下载与安装tomacat"><a href="#1，下载与安装tomacat" class="headerlink" title="1，下载与安装tomacat"></a><strong>1，下载与安装tomacat</strong></h2><p><a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://to进入官网mcat.apache.org/</a></p>
+<p><img src="https://img-blog.csdn.net/20180718092616676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>下载下来解压即可</p>
+<p>接下来呢就是配置环境变量</p>
+<p>1，新建环境变量 CATALINA_HOME  变量值为解压目录的路径..</p>
+<p><img src="https://img-blog.csdn.net/20180718093047290?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>2，将解压目录的bin 添加到path</p>
+<p><img src="https://img-blog.csdn.net/20180718092731817?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>测试启动打开 bin目录有个 <img src="https://img-blog.csdn.net/20180718093124477?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"> 将此文件 拖到cmd命令行中 若出现以下</p>
+<p><img src="https://img-blog.csdn.net/20180718093226685?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>然后打开浏览器输入以下地址localhost：8080  出现以下界面 则代表成功了</p>
+<p><img src="https://img-blog.csdn.net/20180718093454618?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="2，接下来我们就要把服务器和eclipse-集成"><a href="#2，接下来我们就要把服务器和eclipse-集成" class="headerlink" title="2，接下来我们就要把服务器和eclipse 集成"></a><strong>2，接下来我们就要把服务器和eclipse 集成</strong></h2><p>菜单栏的 windows 然后preferences  然后搜索server右边 add 找到解压目录</p>
+<p><img src="https://img-blog.csdn.net/20180718093752685?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdn.net/20180718093830466?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这样呢我们就把 tomcat 集成到我们的eclipse 中了</p>
+<h2 id="3，servlet-jsp"><a href="#3，servlet-jsp" class="headerlink" title="3，servlet +jsp"></a><strong>3，servlet +jsp</strong></h2><p><img src="https://img-blog.csdn.net/20180718094404456?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>接下来创建我们的web项目 </p>
+<p>创建一个动态的web项目</p>
+<p><img src="https://img-blog.csdn.net/20180718095350862?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>输入项目名即可，然后点击完成</p>
+<p><img src="https://img-blog.csdn.net/2018071809552245?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>接下来呢我们在webcontent下创建一个新的文件夹 叫assert 来放我们的js文件</p>
+<p><img src="https://img-blog.csdn.net/20180718100629934?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>然后在<a href="https://jquery.com/download/" target="_blank" rel="noopener">https://jquery.com/download/</a> 去下载 我们这里下载的是3.2.1版本</p>
+<p>WEB-INF 目录下 创建一个xml文件</p>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemalocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"><br> <display-name>zhenai</display-name><br> <welcome-file-list><br>  <welcome-file>index.html</welcome-file><br>  <welcome-file>index.htm</welcome-file><br>  <welcome-file>index.jsp</welcome-file><br>  <welcome-file>default.html</welcome-file><br>  <welcome-file>default.htm</welcome-file><br>  <welcome-file>default.jsp</welcome-file><br> </welcome-file-list><br></web-app></p>
+<p>设置默认的主页</p>
+<p>然后在<img src="https://img-blog.csdn.net/20180718095744611?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">这个文件夹下 创建我们的主页 ，新建一个jsp文件 我叫index</p>
+<p>然后我们在如下的lib导入相应的jar包，这些jar包可以找到 为了方便大家，我就放在百度网盘上 大家下载下来，copy一下即可</p>
+<p><a href="https://pan.baidu.com/s/1fWCVt2RajvgqrSYtrIxDsg" target="_blank" rel="noopener">https://pan.baidu.com/s/1fWCVt2RajvgqrSYtrIxDsg</a></p>
+<p><img src="https://img-blog.csdn.net/20180718095924897?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>index.jsp 如下</p>
+<p><img src="https://img-blog.csdn.net/20180718100339774?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>然后我们去下载echarts的js文件 </p>
+<p><img src="https://img-blog.csdn.net/20180718101159324?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这个是 百度公司的 下载即可</p>
+<p>然后将js文件放到assert文件夹下</p>
+<p><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">http://echarts.baidu.com/</a> </p>
+<p>上面有实例 各种图表的使用示例 源码</p>
+<p><img src="https://img-blog.csdn.net/20180718101452705?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>类似于这样 点开任意一个图表都有示例 及源码</p>
+<p>我们在webcontent 下 新建一个 jsp文件夹 来存放我们的 jsp文件 </p>
+<p>然后我们在jsp文件夹下 新创建一个sex.jsp文件  来制作性别分析</p>
+<p>我们导入我们的js文件 然后插入超链接 来返回我们的主页</p>
+<p>然后我们来hu我们获取据库数据 来为图标提供数据</p>
+<p>首先开发一个servlet查询数据库，获取男女人数：</p>
+<p>刚开始，可以先不操作数据库。</p>
+<p>先模拟数据：</p>
+<p><strong>package</strong> cn.hyxy.zhenai;</p>
+<p><strong>import</strong> java.io.IOException;</p>
+<p><strong>import</strong> java.util.Random;</p>
+<p><strong>import</strong> javax.servlet.ServletException;</p>
+<p><strong>import</strong> javax.servlet.annotation.WebServlet;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServlet;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServletRequest;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServletResponse;</p>
+<p>@WebServlet(“/sex”) // <a href="http://localhos/zhenaiweb/sex" target="_blank" rel="noopener">http://localhos/zhenaiweb/sex</a></p>
+<p><strong>public</strong> <strong>class</strong> SexServlet <strong>extends</strong> HttpServlet {</p>
+<p>  @Override</p>
+<p>  <strong>public</strong> <strong>void</strong> doGet(HttpServletRequest req, HttpServletResponse resp) <strong>throws</strong> ServletException, IOException {</p>
+<p>​    Random r = <strong>new</strong> Random();</p>
+<p>​    <strong>int</strong> male = r.nextInt(1000);</p>
+<p>​    <strong>int</strong> female = r.nextInt(1000);</p>
+<p>​    resp.getWriter().print(“male:”+male+”,female:”+female);</p>
+<p>  }</p>
+<p>}</p>
+<p>测试访问：</p>
+<p><img src="https://img-blog.csdn.net/20180718104034423?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p> 2:使用ajax发送请求，获取数据</p>
+<p>&lt;%@ page language=<em>“java”</em> contentType=<em>“text/html; charset=UTF-8”</em></p>
+<p>  pageEncoding=<em>“UTF-8”</em>%&gt;</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html><br><br><head><meta name="generator" content="Hexo 3.9.0"><br><br><meta charset="UTF-8"><br><br><title>Insert title here</title><br><br><script type="text/javascript" src="../resources/jquery-3.2.1.min.js"></script><br><br></head><br><br><body><br><br>    <p>性别比例</p><br><br>  <h4>来自珍爱网的数据</h4><br><br>  &lt;button id=<em>“btnLoad”</em>&gt;加载<br><br>    <div id="data"></div><br><br></body><br><br><script type="text/javascript"><br><br>  //脚本会自动的执行获取数据<br><br>  $(“#btnLoad”).click(<strong>function</strong>() {<br><br>​    $.get(“../sex”).done(<strong>function</strong>(ttt) {<br><br>​      $(“#data”).text(ttt);<br><br>​    });<br><br>  });<br><br></script><br><br></html>
+
+<p>%@ page language=<em>“java”</em> contentType=<em>“text/html; charset=UTF-8”</em></p>
+<p>  pageEncoding=<em>“UTF-8”</em>%&gt;</p>
+<p>&lt;%@ taglib uri=<em>“<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a></em> prefix=<em>“c”</em> %&gt;</p>
+<p>&lt;!DOCTYPE html&gt;</p>
+<html><br><br><head><meta name="generator" content="Hexo 3.9.0"><br><br><meta charset="UTF-8"><br><br><title>Insert title here</title><br><br><script type="text/javascript" src="<c:url value='/assert/jquery-3.2.1.min.js'/>"></script><br><br></head><br><br><body><br><br>    <p>性别比例</p><br><br>  <h4>来自珍爱网的数据</h4><br><br>  &lt;button id=<em>“btnLoad”</em>&gt;加载<br><br>    <div id="data"></div><br><br></body><br><br><script type="text/javascript"><br><br>  //脚本会自动的执行获取数据<br><br>  $(“#btnLoad”).click(<strong>function</strong>() {<br><br>​    //参数的名称是配置的@WebServlet(“/sex”)里面的/sex<br><br>​    $.get(“&lt;c:url value=’/sex’/&gt;”).done(<strong>function</strong>(ttt) {<br><br>​      $(“#data”).text(ttt);<br><br>​    });<br><br>  });<br><br></script><br><br></html>
+
+<p><img src="https://img-blog.csdn.net/20180718105115456?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>配置数据链接</p>
+<p><img src="https://img-blog.csdn.net/20180718105444279?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>开发后台</p>
+<p>package cn.lyh.zhenai.dao;</p>
+<p>import java.sql.SQLException;<br>import java.util.ArrayList;<br>import java.util.Arrays;<br>import java.util.HashMap;<br>import java.util.List;<br>import java.util.Map;<br>import java.util.Properties;</p>
+<p>import javax.sql.DataSource;</p>
+<p>import org.apache.commons.dbutils.QueryRunner;<br>import org.apache.commons.dbutils.handlers.ColumnListHandler;<br>import org.apache.commons.dbutils.handlers.MapHandler;<br>import org.apache.commons.dbutils.handlers.MapListHandler;<br>import org.apache.commons.dbutils.handlers.ScalarHandler;</p>
+<p>import cn.lyh.zhenai.utils.DSUtils;</p>
+<p>public class ZhenaiDao {<br>   private DataSource ds;</p>
+<p>   private ZhenaiDao() {<br>     ds = DSUtils.getDataSource();<br>   }</p>
+<p>   public static final ZhenaiDao DAO;<br>   static {<br>     DAO = new ZhenaiDao();<br>   }</p>
+<p>   public static ZhenaiDao getDao() {<br>     return DAO;<br>   }</p>
+<p>   // 查询<br>   public List&lt;Map&lt;String, Object&gt;&gt; querySex() {<br>     QueryRunner run = new QueryRunner(ds);<br>     String sql = “select sex as name,count(sex) as value from dogs group by sex”;<br>     List&lt;Map&lt;String, Object&gt;&gt; list = new ArrayList&lt;&gt;();<br>     try {<br>       list = run.query(sql, new MapListHandler());<br>     } catch (SQLException e) {<br>       e.printStackTrace();<br>     }<br>     return list;<br>   }<br>}</p>
+<p><strong>package</strong> cn.hyxy.zhenai.service;</p>
+<p><strong>import</strong> java.util.List;</p>
+<p><strong>import</strong> java.util.Map;</p>
+<p><strong>import</strong> cn.hyxy.zhenai.dao.ZhenaiDao;</p>
+<p><strong>public</strong> <strong>class</strong> ZhenaiService {</p>
+<p>  <strong>private</strong> ZhenaiDao dao;</p>
+<p>  <strong>private</strong> ZhenaiService() {</p>
+<p>​    dao = ZhenaiDao.<em>getDao</em>();</p>
+<p>  }</p>
+<p>  <strong>private</strong> <strong>static</strong> ZhenaiService <em>SERVICE</em>;</p>
+<p>  <strong>static</strong> {</p>
+<p>​    <em>SERVICE</em>=<strong>new</strong> ZhenaiService();</p>
+<p>  }</p>
+<p>  <strong>public</strong> <strong>static</strong> ZhenaiService getService() {</p>
+<p>​    <strong>return</strong> <em>SERVICE</em>;</p>
+<p>  }</p>
+<p>  //</p>
+<p>  <strong>public</strong> List&lt;Map&lt;String, Object&gt;&gt; querySex(){</p>
+<p>​    <strong>return</strong> dao.querySex();</p>
+<p>  }</p>
+<p>}</p>
+<p><strong>package</strong> cn.hyxy.zhenai;</p>
+<p><strong>import</strong> java.io.IOException;</p>
+<p><strong>import</strong> java.util.List;</p>
+<p><strong>import</strong> java.util.Map;</p>
+<p><strong>import</strong> java.util.Random;</p>
+<p><strong>import</strong> javax.servlet.ServletException;</p>
+<p><strong>import</strong> javax.servlet.annotation.WebServlet;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServlet;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServletRequest;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServletResponse;</p>
+<p><strong>import</strong> com.alibaba.fastjson.JSONArray;</p>
+<p><strong>import</strong> cn.hyxy.zhenai.service.ZhenaiService;</p>
+<p>@WebServlet(“/sex”) // <a href="http://localhos/zhenaiweb/sex" target="_blank" rel="noopener">http://localhos/zhenaiweb/sex</a></p>
+<p><strong>public</strong> <strong>class</strong> SexServlet <strong>extends</strong> HttpServlet {</p>
+<p>  @Override</p>
+<p>  <strong>public</strong> <strong>void</strong> doGet(HttpServletRequest req, HttpServletResponse resp) <strong>throws</strong> ServletException, IOException {</p>
+<p>​    Random r = <strong>new</strong> Random();</p>
+<p>​    <strong>int</strong> male = r.nextInt(1000);</p>
+<p>​    <strong>int</strong> female = r.nextInt(1000);</p>
+<p>​    resp.setContentType(“text/plain;charset=UTF-8”);</p>
+<p>​    //获取数据</p>
+<p>​    ZhenaiService ss = ZhenaiService.<em>getService</em>();</p>
+<p>​    List&lt;Map&lt;String, Object&gt;&gt; list = ss.querySex();</p>
+<p>​    //</p>
+<p>​    String json = JSONArray.<em>toJSONString</em>(list);</p>
+<p>​    resp.getWriter().print(json);</p>
+<p>  }</p>
+<p>}</p>
+<p>这样呢我们的 男女性别 分析 就做完了</p>
+<p><img src="https://img-blog.csdn.net/20180718110149363?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>效果如图所示</p>
+<p>接下来呢我们以同样的方法来分析 学历 不过这次我们用的是柱状图、</p>
+<p>先看百度示例</p>
+<p><img src="https://img-blog.csdn.net/20180718110353815?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>option = {</p>
+<p>  xAxis: {</p>
+<p>​    type: ‘category’,</p>
+<p>​    data: [‘Mon’, ‘Tue’, ‘Wed’, ‘Thu’, ‘Fri’, ‘Sat’, ‘Sun’]</p>
+<p>  },</p>
+<p>  yAxis: {</p>
+<p>​    type: ‘value’</p>
+<p>  },</p>
+<p>  series: [{</p>
+<p>​    data: [120, 200, 150, 80, 70, 110, 130],</p>
+<p>​    type: ‘bar’</p>
+<p>  }]</p>
+<p>};</p>
+<h2 id="模拟上面的数据"><a href="#模拟上面的数据" class="headerlink" title="模拟上面的数据"></a>模拟上面的数据</h2><p>//1:获取元素</p>
+<p>  <strong>var</strong> myChart2 = echarts.init(document.getElementById(‘data2’));</p>
+<p>  //2：声明数据</p>
+<p>  <strong>var</strong> option2 = {</p>
+<p>​    xAxis : {</p>
+<p>​      type : ‘category’,</p>
+<p>​      data : [ ‘Mon’, ‘Tue’, ‘Wed’, ‘Thu’, ‘Fri’, ‘Sat’, ‘Sun’ ]</p>
+<p>​    },</p>
+<p>​    yAxis : {</p>
+<p>​      type : ‘value’</p>
+<p>​    },</p>
+<p>​    series : [ {</p>
+<p>​      data : [ 120, 200, 150, 80, 70, 110, 130 ],</p>
+<p>​      type : ‘bar’</p>
+<p>​    } ]</p>
+<p>  };</p>
+<p>  //设置值</p>
+<p>  myChart2.setOption(option2);</p>
+<p>出现以下的数据：</p>
+<p><img src="https://img-blog.csdn.net/20180718110457543?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>–添加更多的的数据：</p>
+<p>//1:获取元素</p>
+<p>  <strong>var</strong> myChart2 = echarts.init(document.getElementById(‘data2’));</p>
+<p>  //2：声明数据</p>
+<p>  <strong>var</strong> option2 = {</p>
+<p>​    legend : {</p>
+<p>​      data : [ ‘男’, ‘女’ ]</p>
+<p>​    },</p>
+<p>​    xAxis : {</p>
+<p>​      type : ‘category’,</p>
+<p>​      data : [ ‘高中’, ‘专科’, ‘本科’ ]</p>
+<p>​    },</p>
+<p>​    yAxis : {</p>
+<p>​      type : ‘value’</p>
+<p>​    },</p>
+<p>​    series : [ {</p>
+<p>​      name : ‘男’,</p>
+<p>​      data : [ 120, 200, 150 ],</p>
+<p>​      label : {</p>
+<p>​        show : <strong>true</strong>,</p>
+<p>​        position:’inside’,</p>
+<p>​        formatter:<strong>function</strong>(param){</p>
+<p>​          <strong>return</strong> param.value+”人”;</p>
+<p>​        }</p>
+<p>​      },</p>
+<p>​      type : ‘bar’</p>
+<p>​    }, {</p>
+<p>​      name : ‘女’,</p>
+<p>​      data : [ 70, 110, 130 ],</p>
+<p>​      label : {</p>
+<p>​        show : <strong>true</strong></p>
+<p>​      },</p>
+<p>​      type : ‘bar’</p>
+<p>​    } ]</p>
+<p>  };</p>
+<p>  //设置值</p>
+<p>  myChart2.setOption(option2);</p>
+<p><img src="https://img-blog.csdn.net/20180718110532424?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h2 id="从数据库中获取数据"><a href="#从数据库中获取数据" class="headerlink" title="从数据库中获取数据"></a>从数据库中获取数据</h2><h3 id="1：确定有多少学历"><a href="#1：确定有多少学历" class="headerlink" title="1：确定有多少学历"></a>1：确定有多少学历</h3><p><img src="https://img-blog.csdn.net/20180718110744368?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<h3 id="查询每一种学历，男的，女的各多少人"><a href="#查询每一种学历，男的，女的各多少人" class="headerlink" title="查询每一种学历，男的，女的各多少人"></a>查询每一种学历，男的，女的各多少人</h3><h3 id="然后根据要求组织数据"><a href="#然后根据要求组织数据" class="headerlink" title="然后根据要求组织数据"></a>然后根据要求组织数据</h3><p><img src="https://img-blog.csdn.net/20180718110904414?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>[ {</p>
+<p>​      name : ‘男’,</p>
+<p>​      data : [ 120, 200, 150 ],</p>
+<p>​      </p>
+<p>​    }, {</p>
+<p>​      name : ‘女’,</p>
+<p>​      data : [ 70, 110, 130 ],</p>
+<p>​      </p>
+<p>​    } ]</p>
+<h1 id="提供模拟数据"><a href="#提供模拟数据" class="headerlink" title="提供模拟数据"></a>提供模拟数据</h1><p><strong>package</strong> cn.lyh.zhenai;</p>
+<p><strong>import</strong> java.io.IOException;</p>
+<p><strong>import</strong> java.util.Random;</p>
+<p><strong>import</strong> javax.servlet.ServletException;</p>
+<p><strong>import</strong> javax.servlet.annotation.WebServlet;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServlet;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServletRequest;</p>
+<p><strong>import</strong> javax.servlet.http.HttpServletResponse;</p>
+<p>@WebServlet(“/sexgrade”)</p>
+<p><strong>public</strong> <strong>class</strong> SexGradeServlet <strong>extends</strong> HttpServlet {</p>
+<p>  @Override</p>
+<p>  <strong>public</strong> <strong>void</strong> doGet(HttpServletRequest req, HttpServletResponse resp) <strong>throws</strong> ServletException, IOException {</p>
+<p>​    <strong>int</strong> a = <strong>new</strong> Random().nextInt(100);</p>
+<p>​    String json = “[{‘name’:’男’,’data’:[“+a+”,210,150]},{‘name’:’女’,’data’:[ 80, 110, 130 ]}]”;</p>
+<p>​    //输出这个数据</p>
+<p>​    resp.setContentType(“text/plain;charset=UTF-8”);</p>
+<p>​    resp.getWriter().print(json);</p>
+<p>  }</p>
+<p>}</p>
+<p>delete frome doges where grade !=’中专’ and grade !=’大专’ and grade !=’大学本科’ and grade !=’高中及以下’ and grade !=’硕士’ and grade !=’博士’</p>
+<h2 id="获取真实的数据"><a href="#获取真实的数据" class="headerlink" title="获取真实的数据"></a><strong>获取真实的数据</strong></h2><p>public Map&lt;String, Object&gt; querySexGrade() {<br>     // 声明返回的数据 -DAO - &gt; DataAccess Object<br>     Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();<br>     try {<br>       List<string> list = new ArrayList&lt;&gt;();<br>       // 声明SQL语句<br>       String sql = “SELECT DISTINCT grade FROM dogs WHERE grade !=’–’”;<br>       QueryRunner run = new QueryRunner(ds);<br>       list = run.query(sql, new ColumnListHandler<string>());</string></string></p>
+<p>​       map.put(“legend”, list);<br>​       // 声明数据<br>​       List&lt;Map&lt;String, Object&gt;&gt; datas = new ArrayList&lt;&gt;();<br>​       // 声明男<br>​       // 声明男生的数量，和女生的数量的集合<br>​       List<integer> maleDatas = new ArrayList&lt;&gt;();<br>​       List<integer> femaleDatas = new ArrayList&lt;&gt;();</integer></integer></p>
+<p>​       // 查询男，各种学历<br>​       for (String grade : list) {<br>​         String sqlA = “SELECT COUNT(1) FROM dogs WHERE grade=? AND sex=’女’”;<br>​         String sqlB = “SELECT COUNT(1) FROM dogs WHERE grade=? AND sex=’男’”;<br>​         int cnt = run.query(sqlA, new ScalarHandler<long>(), grade).intValue();<br>​         femaleDatas.add(cnt);<br>​         cnt = run.query(sqlB, new ScalarHandler<long>(), grade).intValue();<br>​         maleDatas.add(cnt);<br>​       }</long></long></p>
+<p>​       Map&lt;String, Object&gt; male = new HashMap&lt;&gt;();<br>​       male.put(“name”, “男”);<br>​       male.put(“data”, maleDatas);<br>​       datas.add(male);</p>
+<p>​       Map&lt;String, Object&gt; female = new HashMap&lt;&gt;();<br>​       female.put(“name”, “女”);<br>​       female.put(“data”, femaleDatas);<br>​       datas.add(female);<br>​       //<br>​       map.put(“datas”, datas);</p>
+<p>​     } catch (Exception e) {<br>​       throw new RuntimeException(e);<br>​     }<br>​     return map;<br>   }<br><img src="https://img-blog.csdn.net/20180718111256978?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">​</p>
+<p>然后我们就做出了如图所示的报表</p>
+<p>大家可以照猫画虎，分析住房，年龄，等等，若遇到什么问题 欢迎在评论区评论，我会在第一时间帮助你哦，明天我将会为大家分享地图报表的制作哦！</p>
+
+      </div>
+      
+        <br>
+        <center>已经到底了！：<br><fancybox><img src="https://img.vim-cn.com/4a/5f8244a7c6e1e069a781b84ed11008e7955e16.png" alt=""></fancybox></center>
+      
+      
+        <br>
+        
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-19T11:06:21+08:00">
+  <a class='notlink'>
+    <i class="fas fa-clock" aria-hidden="true"></i>
+    <p>更新于 2020年10月19日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknew.com/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（四）/&title= | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknew.com/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（四）/&title= | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEgklEQVR42u3aS27jQAwFwLn/pT3bAQLbj2QLIyqlVeDEUncpQPP35098vf65Pn/y8+d3d0ue9fN6d5939/y8zsMXJkyYMGG6JVOyrOrnE+6EIKf8/JIK98GECRMmTMuZkttNju3P0HnQ8JnjbBiBCRMmTJh+J9M8Na3iJsf5PF3HhAkTJkyYqgXcSYI6qbteEo5gwoQJE6blTPntJo3M5KhOtjp/YRfWwjFhwoQJ082Y8qP3eT9fMt+ECRMmTJhuw/QqXpNvzQeAqsHKqQsTJkyYMO1l6iWrvQP4c2OyGo7kTdDeczFhwoQJ0zOYqoMvOd+kRJtvLE9ukxW+XS0mTJgwYVrLlB+iveO/GaHETdM8tT5QDsaECRMmTAuZeoXafJTnFFl16Kc3ivSlNoAJEyZMmB7ElKSgkzCiWrTtfbcX3HyJmDBhwoQJ00KmXuOwOttZLeZWm515Mlx+SZgwYcKE6XFMvRS0F2ScSmuroUBhbZgwYcKEaS1TL8XNUc4+ZfIaDtBjwoQJE6aFTL3ktrfhpIxbLRBXv1VlfTu4gwkTJkyYljDNi62fk9VqIjp5Yn63XtKOCRMmTJg2MuVF3t5Yz6lm5Dx0SHDLoQAmTJgwYbo9UzU1rd762OIGAUE+kBStARMmTJgwLWfKx3qSz/O/6S29GiIk7cwvz8WECRMmTKuYqturHrSTFDTn672AQuMTEyZMmDA9gikvy/bKvsmik03mKHno8OWFYcKECROm5UxJC3BSSO0NzfTu3Et9vyTVmDBhwoRpOVPebpwM9+TLmnzrbLKNCRMmTJi2M1XTzmoyXE01TwUfp8q+mDBhwoRpO1N+62Sr8xS3N4JTTX3L/xyYMGHChGktU96kvG6kJl9odcSnl7pHrJgwYcKEaQlTMnyTby8f65kHIpNxnPIAECZMmDBhWsuUPDhp+FWLqsmRnAQNvTCit0dMmDBhwrSXKV9ur91YTbCbh3QrCMhDBEyYMGHC9FSmSaI7r0DnQzbJi8nXVg4IMGHChAnTLZl6R3I+8pLc52zzcpKQv10nJkyYMGFazpSXWV/xVV1Qr/WYU47Sb0yYMGHC9AimHlaza1psWF4REBSwMGHChAnTcqYrBl96KKc2Vt1XFBBgwoQJE6a1TNX0dT5Gkw/l5K+tmlTnYQcmTJgwYdrLlJdu5wM91WZn74WdSsLLYQEmTJgwYbolU29wp5pq9hqK1SdWX2ShbI0JEyZMmB7BlBzJ+a2rxdacJi8Bz9ucmDBhwoRpO9Mk7eyVSvMNJ1tKPs9brYVUGRMmTJgwLWF6Fa+crLexZLym+lInI0qYMGHChGk7U++YzNPXU0d43qTskUVdX0yYMGHCtJap2jLMk8b50T4f+qkO+mDChAkTpqcy9Uql1eCgWuTtJb2Te5Z/jQkTJkyYHs00+e0VwzrJ05P0+G1FHBMmTJgw/Rqm/MjvlYaryfYVzdfD9WlMmDBhwvRfmXpbOpu+5iM1k2J0DxoTJkyYMO1lqhZA86M6SimLxeJTjdUrysSYMGHChOlmTH8BFzUv4KYp15kAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+        
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=http://www.windknew.com/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（四）/&title= | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEgklEQVR42u3aS27jQAwFwLn/pT3bAQLbj2QLIyqlVeDEUncpQPP35098vf65Pn/y8+d3d0ue9fN6d5939/y8zsMXJkyYMGG6JVOyrOrnE+6EIKf8/JIK98GECRMmTMuZkttNju3P0HnQ8JnjbBiBCRMmTJh+J9M8Na3iJsf5PF3HhAkTJkyYqgXcSYI6qbteEo5gwoQJE6blTPntJo3M5KhOtjp/YRfWwjFhwoQJ082Y8qP3eT9fMt+ECRMmTJhuw/QqXpNvzQeAqsHKqQsTJkyYMO1l6iWrvQP4c2OyGo7kTdDeczFhwoQJ0zOYqoMvOd+kRJtvLE9ukxW+XS0mTJgwYVrLlB+iveO/GaHETdM8tT5QDsaECRMmTAuZeoXafJTnFFl16Kc3ivSlNoAJEyZMmB7ElKSgkzCiWrTtfbcX3HyJmDBhwoQJ00KmXuOwOttZLeZWm515Mlx+SZgwYcKE6XFMvRS0F2ScSmuroUBhbZgwYcKEaS1TL8XNUc4+ZfIaDtBjwoQJE6aFTL3ktrfhpIxbLRBXv1VlfTu4gwkTJkyYljDNi62fk9VqIjp5Yn63XtKOCRMmTJg2MuVF3t5Yz6lm5Dx0SHDLoQAmTJgwYbo9UzU1rd762OIGAUE+kBStARMmTJgwLWfKx3qSz/O/6S29GiIk7cwvz8WECRMmTKuYqturHrSTFDTn672AQuMTEyZMmDA9gikvy/bKvsmik03mKHno8OWFYcKECROm5UxJC3BSSO0NzfTu3Et9vyTVmDBhwoRpOVPebpwM9+TLmnzrbLKNCRMmTJi2M1XTzmoyXE01TwUfp8q+mDBhwoRpO1N+62Sr8xS3N4JTTX3L/xyYMGHChGktU96kvG6kJl9odcSnl7pHrJgwYcKEaQlTMnyTby8f65kHIpNxnPIAECZMmDBhWsuUPDhp+FWLqsmRnAQNvTCit0dMmDBhwrSXKV9ur91YTbCbh3QrCMhDBEyYMGHC9FSmSaI7r0DnQzbJi8nXVg4IMGHChAnTLZl6R3I+8pLc52zzcpKQv10nJkyYMGFazpSXWV/xVV1Qr/WYU47Sb0yYMGHC9AimHlaza1psWF4REBSwMGHChAnTcqYrBl96KKc2Vt1XFBBgwoQJE6a1TNX0dT5Gkw/l5K+tmlTnYQcmTJgwYdrLlJdu5wM91WZn74WdSsLLYQEmTJgwYbolU29wp5pq9hqK1SdWX2ShbI0JEyZMmB7BlBzJ+a2rxdacJi8Bz9ucmDBhwoRpO9Mk7eyVSvMNJ1tKPs9brYVUGRMmTJgwLWF6Fa+crLexZLym+lInI0qYMGHChGk7U++YzNPXU0d43qTskUVdX0yYMGHCtJap2jLMk8b50T4f+qkO+mDChAkTpqcy9Uql1eCgWuTtJb2Te5Z/jQkTJkyYHs00+e0VwzrJ05P0+G1FHBMmTJgw/Rqm/MjvlYaryfYVzdfD9WlMmDBhwvRfmXpbOpu+5iM1k2J0DxoTJkyYMO1lqhZA86M6SimLxeJTjdUrysSYMGHChOlmTH8BFzUv4KYp15kAAAAASUVORK5CYII='>
+        
+          <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+        
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+      
+      
+          <div class="prev-next">
+              
+                  <section class="prev">
+                      <span class="art-item-left">
+                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                          <h4>
+                              <a href="/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（三）/" rel="prev" title="">
+                                
+                                    2020-10-19 星期一
+                                
+                              </a>
+                          </h4>
+                          
+                      </span>
+                  </section>
+              
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                          <h4>
+                              <a href="/hello-world/" rel="prev" title="Hello World">
+                                  
+                                      Hello World
+                                  
+                              </a>
+                          </h4>
+                          
+                      </span>
+                  </section>
+              
+          </div>
+      
+    </section>
+  </article>
+
+
+
+  <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box comments">
+    <section class="article typo">
+      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-spinner fa-spin fa-fw"></i>
+          </div>
+        </section>
+      
+    </section>
+  </article>
+
+
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+    
+    
+      
+      
+        
+          
+          
+            
+              <section class='widget author'>
+  <div class='content material'>
+    
+      <div class='avatar'>
+        <img class='avatar' src='http://i2.tiimg.com/708378/9da6ad9df503cebc.jpg'/>
+      </div>
+    
+    
+      <div class='text'>
+        
+        
+        
+          <p><span id="jinrishici-sentence">风晓博客</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="/atom.xml"
+              class="social fas fa-rss flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="mailto:me@xaoxuu.com"
+              class="social fas fa-envelope flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://github.com/xaoxuu"
+              class="social fab fa-github flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=63035382"
+              class="social fas fa-headphones-alt flat-btn"
+              target="_blank"
+              rel="external nofollow noopener noreferrer">
+            </a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget plain'>
+  
+<header class='material'>
+  <div><i class="fas fa-file fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文本部件</div>
+  
+</header>
+
+  <div class='content material'>
+    <p>这是一段支持markdown的文本<br><img src="https://img.vim-cn.com/4e/3c87a2fd28fd0b9c2f27ce3f83f1e9275d0488.png" alt=""></p>
+
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget toc-wrapper'>
+    
+<header class='material'>
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;本文目录</div>
+  
+    <!-- <div class='wrapper'><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div> -->
+  
+</header>
+
+    <div class='content material'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1，下载与安装tomacat"><span class="toc-text">1，下载与安装tomacat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2，接下来我们就要把服务器和eclipse-集成"><span class="toc-text">2，接下来我们就要把服务器和eclipse 集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3，servlet-jsp"><span class="toc-text">3，servlet +jsp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-text">来自珍爱网的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-text">来自珍爱网的数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模拟上面的数据"><span class="toc-text">模拟上面的数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从数据库中获取数据"><span class="toc-text">从数据库中获取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1：确定有多少学历"><span class="toc-text">1：确定有多少学历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查询每一种学历，男的，女的各多少人"><span class="toc-text">查询每一种学历，男的，女的各多少人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#然后根据要求组织数据"><span class="toc-text">然后根据要求组织数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#提供模拟数据"><span class="toc-text">提供模拟数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取真实的数据"><span class="toc-text">获取真实的数据</span></a></li></ol>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget grid'>
+  
+<header class='material'>
+  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
+  
+</header>
+
+  <div class='content material'>
+    <ul class="grid navgation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home">
+          
+            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
+          
+          近期文章
+        </a></li>
+      
+        <li><a class="flat-box" title="/blog/archives/" href="/blog/archives/"
+          
+            rel="nofollow"
+          
+          
+          id="blogarchives">
+          
+            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
+          
+          文章归档
+        </a></li>
+      
+        <li><a class="flat-box" title="/aifei/" href="/aifei/"
+          
+          
+          id="aifei">
+          
+            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
+          
+          她
+        </a></li>
+      
+        <li><a class="flat-box" title="/taiqiu/" href="/taiqiu/"
+          
+            rel="nofollow"
+          
+          
+          id="taiqiu">
+          
+            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
+          
+          小游戏
+        </a></li>
+      
+        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/"
+          
+            rel="nofollow"
+          
+          
+          id="https:xaoxuu.comwikimaterial-x">
+          
+            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
+          
+          主题文档
+        </a></li>
+      
+        <li><a class="flat-box" title="/about/" href="/about/"
+          
+            rel="nofollow"
+          
+          
+          id="about">
+          
+            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
+          
+          关于小站
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget category'>
+    
+<header class='material'>
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章分类</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/categories/"
+    title="blog/categories/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content material'>
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/blog/categories/java/" href="/blog/categories/java/"><div class='name'>java</div><div class='badge'>(8)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/python/" href="/blog/categories/python/"><div class='name'>python</div><div class='badge'>(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/blog/categories/教程/" href="/blog/categories/教程/"><div class='name'>教程</div><div class='badge'>(5)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              
+  <section class='widget tagcloud'>
+    
+<header class='material'>
+  <div><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+    <a class="rightBtn"
+    
+      rel="nofollow"
+    
+    
+    href="/blog/tags/"
+    title="blog/tags/">
+    <i class="fas fa-expand-arrows-alt fa-fw"></i></a>
+  
+</header>
+
+    <div class='content material'>
+      <a href="/blog/tags/blog/" style="font-size: 21.5px; color: #666">blog</a> <a href="/blog/tags/hexo/" style="font-size: 19px; color: #777">hexo</a> <a href="/blog/tags/java/" style="font-size: 24px; color: #555">java</a> <a href="/blog/tags/python/" style="font-size: 14px; color: #999">python</a> <a href="/blog/tags/学习/" style="font-size: 21.5px; color: #666">学习</a> <a href="/blog/tags/爬虫/" style="font-size: 16.5px; color: #888">爬虫</a>
+    </div>
+  </section>
+
+
+            
+          
+        
+          
+          
+        
+          
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+            
+              <section class='widget list'>
+  
+<header class='material'>
+  <div><i class="fas fa-thumbs-up fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;强烈推荐</div>
+  
+</header>
+
+  <div class='content material'>
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="/paopaolong/" href="/paopaolong/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;台球
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="/leiting/" href="/leiting/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;雷霆战机
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://yasuotu.com" href="https://yasuotu.com"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;图片在线压缩
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://realfavicongenerator.net" href="https://realfavicongenerator.net"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;生成Favicon
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://mxclub.github.io/resume/" href="https://mxclub.github.io/resume/"
+          
+          
+          >
+          <div class='name'>
+            
+              <i class=" fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;简历主题
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+            
+          
+        
+      
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+          
+          
+        
+      
+    
+
+  
+</aside>
+
+<footer id="footer" class="clearfix">
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="/atom.xml"
+            class="social fas fa-rss flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="mailto:me@xaoxuu.com"
+            class="social fas fa-envelope flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://github.com/xaoxuu"
+            class="social fab fa-github flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=63035382"
+            class="social fas fa-headphones-alt flat-btn"
+            target="_blank"
+            rel="external nofollow noopener noreferrer">
+          </a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+    <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>
+    本站使用
+    <a href="https://xaoxuu.com/wiki/material-x/" target="_blank" class="codename">Material X</a>
+    作为主题
+    
+      ，
+      总访问量为
+      <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span>
+      次
+    
+    。
+  </div>
+  <img src="https://static.dy208.cn/o_1dfilp8ruo521thr1hvf18ji17soa.png">
+<a href="http://www.beian.miit.gov.cn/"  style="color:#f72b07" target="_blank">宁ICP备 - 20000129号</a>
+</footer>
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+  
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        if ('') {
+          $('').backstretch(
+          ["https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4021295263,698158057&fm=26&gp=0.jpg", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1512834176,4023271970&fm=26&gp=0.jpg", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3231447222,867535500&fm=26&gp=0.jpg"],
+          {
+            duration: "3000",
+            fade: "2500"
+          });
+        } else {
+          $.backstretch(
+          ["https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4021295263,698158057&fm=26&gp=0.jpg", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1512834176,4023271970&fm=26&gp=0.jpg", "https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3231447222,867535500&fm=26&gp=0.jpg"],
+          {
+            duration: "3000",
+            fade: "2500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/xaoxuu/volantis@1.0.6/js/volantis.min.js"></script>
+    
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var notify = 'true' == true;
+  var verify = 'true' == true;
+  var valine = new Valine();
+  valine.init({
+    el: '#valine_container',
+    notify: notify,
+    verify: verify,
+    guest_info: guest_info,
+    
+    appId: "xK7VI59tzI1DKYelaz8ONkAe-gzGzoHsz",
+    appKey: "Rs0tQaXk0R1VHHLyTsBYthIa",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'mp',
+    lang:'zh-cn',
+    highlight:'true'
+  })
+  </script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11/js/app.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-material-x@19.11/js/search.js"></script>
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>复制</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("fancybox").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+
+!--动态线条背景-->
+
+    <script type="text/javascript" color="0, 100, 0" opacity="0.8" 
+        zIndex="-1" count="200" 
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+
+
+
+    <script type="text/javascript" src="js/love.js"></script>
+
+</body>
+</html>
