@@ -379,14 +379,14 @@
       <a class='notlink'>
         <i class="fas fa-keyboard" aria-hidden="true"></i>
         <p>字数统计:</p>
-        <p>2k字</p>
+        <p>1.6k字</p>
       </a>
     </div>
     <div class="new-meta-item readtime">
       <a class='notlink'>
         <i class="fas fa-hourglass-half" aria-hidden="true"></i>
         <p>阅读时长≈</p>
-        <p>9分</p>
+        <p>6分</p>
       </a>
     </div>
   
@@ -408,274 +408,144 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <p>title: 零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（四）<br>date: 2018-07-02 10:34:30<br>tags: </p>
+        <p>title:  零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（三）<br>date:  2018-07-02 10:34:30<br>tags: </p>
 <ul>
 <li>爬虫</li>
 <li>blog</li>
 </ul>
-<p>上次我们的爬虫已经完成了 接下来呢 就是我们的报表。</p>
-<p>我们用的是网页形式来展示，所以呢我们需要搭建一个本地的服务器。我们使用的是tomcat</p>
-<h2 id="1，下载与安装tomacat"><a href="#1，下载与安装tomacat" class="headerlink" title="1，下载与安装tomacat"></a><strong>1，下载与安装tomacat</strong></h2><p><a href="http://tomcat.apache.org/" target="_blank" rel="noopener">http://to进入官网mcat.apache.org/</a></p>
-<p><img src="https://img-blog.csdn.net/20180718092616676?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>下载下来解压即可</p>
-<p>接下来呢就是配置环境变量</p>
-<p>1，新建环境变量 CATALINA_HOME  变量值为解压目录的路径..</p>
-<p><img src="https://img-blog.csdn.net/20180718093047290?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>2，将解压目录的bin 添加到path</p>
-<p><img src="https://img-blog.csdn.net/20180718092731817?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>测试启动打开 bin目录有个 <img src="https://img-blog.csdn.net/20180718093124477?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"> 将此文件 拖到cmd命令行中 若出现以下</p>
-<p><img src="https://img-blog.csdn.net/20180718093226685?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>然后打开浏览器输入以下地址localhost：8080  出现以下界面 则代表成功了</p>
-<p><img src="https://img-blog.csdn.net/20180718093454618?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h2 id="2，接下来我们就要把服务器和eclipse-集成"><a href="#2，接下来我们就要把服务器和eclipse-集成" class="headerlink" title="2，接下来我们就要把服务器和eclipse 集成"></a><strong>2，接下来我们就要把服务器和eclipse 集成</strong></h2><p>菜单栏的 windows 然后preferences  然后搜索server右边 add 找到解压目录</p>
-<p><img src="https://img-blog.csdn.net/20180718093752685?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p><img src="https://img-blog.csdn.net/20180718093830466?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这样呢我们就把 tomcat 集成到我们的eclipse 中了</p>
-<h2 id="3，servlet-jsp"><a href="#3，servlet-jsp" class="headerlink" title="3，servlet +jsp"></a><strong>3，servlet +jsp</strong></h2><p><img src="https://img-blog.csdn.net/20180718094404456?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>接下来创建我们的web项目 </p>
-<p>创建一个动态的web项目</p>
-<p><img src="https://img-blog.csdn.net/20180718095350862?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>输入项目名即可，然后点击完成</p>
-<p><img src="https://img-blog.csdn.net/2018071809552245?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>接下来呢我们在webcontent下创建一个新的文件夹 叫assert 来放我们的js文件</p>
-<p><img src="https://img-blog.csdn.net/20180718100629934?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>然后在<a href="https://jquery.com/download/" target="_blank" rel="noopener">https://jquery.com/download/</a> 去下载 我们这里下载的是3.2.1版本</p>
-<p>WEB-INF 目录下 创建一个xml文件</p>
-<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
-<p><web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemalocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"><br> <display-name>zhenai</display-name><br> <welcome-file-list><br>  <welcome-file>index.html</welcome-file><br>  <welcome-file>index.htm</welcome-file><br>  <welcome-file>index.jsp</welcome-file><br>  <welcome-file>default.html</welcome-file><br>  <welcome-file>default.htm</welcome-file><br>  <welcome-file>default.jsp</welcome-file><br> </welcome-file-list><br></web-app></p>
-<p>设置默认的主页</p>
-<p>然后在<img src="https://img-blog.csdn.net/20180718095744611?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">这个文件夹下 创建我们的主页 ，新建一个jsp文件 我叫index</p>
-<p>然后我们在如下的lib导入相应的jar包，这些jar包可以找到 为了方便大家，我就放在百度网盘上 大家下载下来，copy一下即可</p>
-<p><a href="https://pan.baidu.com/s/1fWCVt2RajvgqrSYtrIxDsg" target="_blank" rel="noopener">https://pan.baidu.com/s/1fWCVt2RajvgqrSYtrIxDsg</a></p>
-<p><img src="https://img-blog.csdn.net/20180718095924897?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>index.jsp 如下</p>
-<p><img src="https://img-blog.csdn.net/20180718100339774?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>然后我们去下载echarts的js文件 </p>
-<p><img src="https://img-blog.csdn.net/20180718101159324?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>这个是 百度公司的 下载即可</p>
-<p>然后将js文件放到assert文件夹下</p>
-<p><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">http://echarts.baidu.com/</a> </p>
-<p>上面有实例 各种图表的使用示例 源码</p>
-<p><img src="https://img-blog.csdn.net/20180718101452705?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>类似于这样 点开任意一个图表都有示例 及源码</p>
-<p>我们在webcontent 下 新建一个 jsp文件夹 来存放我们的 jsp文件 </p>
-<p>然后我们在jsp文件夹下 新创建一个sex.jsp文件  来制作性别分析</p>
-<p>我们导入我们的js文件 然后插入超链接 来返回我们的主页</p>
-<p>然后我们来hu我们获取据库数据 来为图标提供数据</p>
-<p>首先开发一个servlet查询数据库，获取男女人数：</p>
-<p>刚开始，可以先不操作数据库。</p>
-<p>先模拟数据：</p>
-<p><strong>package</strong> cn.hyxy.zhenai;</p>
-<p><strong>import</strong> java.io.IOException;</p>
-<p><strong>import</strong> java.util.Random;</p>
-<p><strong>import</strong> javax.servlet.ServletException;</p>
-<p><strong>import</strong> javax.servlet.annotation.WebServlet;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServlet;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServletRequest;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServletResponse;</p>
-<p>@WebServlet(“/sex”) // <a href="http://localhos/zhenaiweb/sex" target="_blank" rel="noopener">http://localhos/zhenaiweb/sex</a></p>
-<p><strong>public</strong> <strong>class</strong> SexServlet <strong>extends</strong> HttpServlet {</p>
-<p>  @Override</p>
-<p>  <strong>public</strong> <strong>void</strong> doGet(HttpServletRequest req, HttpServletResponse resp) <strong>throws</strong> ServletException, IOException {</p>
-<p>​    Random r = <strong>new</strong> Random();</p>
-<p>​    <strong>int</strong> male = r.nextInt(1000);</p>
-<p>​    <strong>int</strong> female = r.nextInt(1000);</p>
-<p>​    resp.getWriter().print(“male:”+male+”,female:”+female);</p>
-<p>  }</p>
-<p>}</p>
-<p>测试访问：</p>
-<p><img src="https://img-blog.csdn.net/20180718104034423?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p> 2:使用ajax发送请求，获取数据</p>
-<p>&lt;%@ page language=<em>“java”</em> contentType=<em>“text/html; charset=UTF-8”</em></p>
-<p>  pageEncoding=<em>“UTF-8”</em>%&gt;</p>
-<p>&lt;!DOCTYPE html&gt;</p>
-<html><br><br><head><meta name="generator" content="Hexo 3.9.0"><br><br><meta charset="UTF-8"><br><br><title>Insert title here</title><br><br><script type="text/javascript" src="../resources/jquery-3.2.1.min.js"></script><br><br></head><br><br><body><br><br>    <p>性别比例</p><br><br>  <h4>来自珍爱网的数据</h4><br><br>  &lt;button id=<em>“btnLoad”</em>&gt;加载<br><br>    <div id="data"></div><br><br></body><br><br><script type="text/javascript"><br><br>  //脚本会自动的执行获取数据<br><br>  $(“#btnLoad”).click(<strong>function</strong>() {<br><br>​    $.get(“../sex”).done(<strong>function</strong>(ttt) {<br><br>​      $(“#data”).text(ttt);<br><br>​    });<br><br>  });<br><br></script><br><br></html>
+<p>继续我们的项目， 上次之后我们基本上完成了数据的获取（即爬虫），接下来呢就是如何去保存这些数据，有两种方式，一种呢是以文本形式保存到本地，第二种是就是保存到数据库，而我们呢选择后者。</p>
+<h1 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a><strong>Mysql</strong></h1><p>1，第一当然还是先下载了，进入网站即可选择相应的版本<a href="https://dev.mysql.com/downloads/file/?id=476696" target="_blank" rel="noopener">https://dev.mysql.com/downloads/file/?id=476696</a></p>
+<p>2.我们这里是5.7.22,打开网址，翻到最下面，点击如下，直接下载就好</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717103129351" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>3，解压，进行初始化数据库</p>
+<p>在bin目录下，执行以下的命令来初始化数据库（cmd下）：</p>
+<p>D:\b\mysql-5.7.21-winx64\bin&gt;mysqld –initialize，</p>
+<p>获取初始化以后的用户名root,和密码：</p>
+<p>然后你会发现解压的目录下，多了一个叫data的文件夹</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717103509819" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>打开之后，有一个后缀为err的文件，用notepade++ 打开  或者记事本也可以</p>
+<p>，<img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717103709671" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>在这个文件的最后，每个人的不一样 但localhost：  后面的就是你的密码</p>
+<p>4，接下来呢，测试启动mysql  </p>
+<p>在解压目录下的bin目录下 输入以下指令mysqld –console</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104033568" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104048648" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>如果显示如图信息，就证明你安装成功了。切记不要关闭这个窗口。</p>
+<p>5，登陆</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104220705" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>密码就是刚才那个文件夹里的那个，但你会发现在这个密码下什么都做不了</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104311575" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>修改密码：输入以下指令即可修改密码，如下1234就是我所修改之后的密码，</p>
+<p>mysql&gt; set password=password(‘1234’);</p>
+<p>显示以下信息就代表修改成功了</p>
+<p>Query OK, 0 rows affected, 1 warning (0.00 sec)</p>
+<p>修改完成之后，我们再执行 show tables  jiu’就会发现可以执行了</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104602984" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>显示的这些信息都是你所包含的表</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104651619" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>6，方便起见，我们将mysql 安装成windows服务，在bin目录下，执行如下指令即可完成安装</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717104808813" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>接下来呢我们配置环境变量，这样我们就可以在cmd中启动mysql了</p>
+<p>在path 下添加到mysql的bin，如下图</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717105038715" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>然后打开cmd 输入  net start mysql  即可启动mysql(要注意在执行之前我们要关掉之前测试启动mysql的那个窗口)</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717105203308" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>当然了 停止mysql 的命令是 net stop mysql</p>
+<p>7，再登陆</p>
+<p>-u用户名 -p</p>
+<p>对于本机来说：</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717105600496" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>你可以设置远程登陆，即在别人的机器上也可以登录你的数据库，具体设置方法如下</p>
+<p>1.先查看一下你的用户列表</p>
+<p><img src="https://img-blog.csdn.net/2018071710581066?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>你会发现  在root 那栏 只有localhost  即代表只有本机才可以登陆，接下来呢将localhosthuan换成% 这样就可以实现远程登陆了</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/2020/20180717110031377" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>到这里呢我们的mysql 基本上就设置好了</p>
+<p>接下来呢我们去xia项目中添加mysql的依赖</p>
+<dependency><br><br>​      <groupid>mysql</groupid><br><br>​      <artifactid>mysql-connector-java</artifactid><br><br>​      <version>5.1.46</version><br><br>​    </dependency>
 
-<p>%@ page language=<em>“java”</em> contentType=<em>“text/html; charset=UTF-8”</em></p>
-<p>  pageEncoding=<em>“UTF-8”</em>%&gt;</p>
-<p>&lt;%@ taglib uri=<em>“<a href="http://java.sun.com/jsp/jstl/core&quot;" target="_blank" rel="noopener">http://java.sun.com/jsp/jstl/core&quot;</a></em> prefix=<em>“c”</em> %&gt;</p>
-<p>&lt;!DOCTYPE html&gt;</p>
-<html><br><br><head><meta name="generator" content="Hexo 3.9.0"><br><br><meta charset="UTF-8"><br><br><title>Insert title here</title><br><br><script type="text/javascript" src="<c:url value='/assert/jquery-3.2.1.min.js'/>"></script><br><br></head><br><br><body><br><br>    <p>性别比例</p><br><br>  <h4>来自珍爱网的数据</h4><br><br>  &lt;button id=<em>“btnLoad”</em>&gt;加载<br><br>    <div id="data"></div><br><br></body><br><br><script type="text/javascript"><br><br>  //脚本会自动的执行获取数据<br><br>  $(“#btnLoad”).click(<strong>function</strong>() {<br><br>​    //参数的名称是配置的@WebServlet(“/sex”)里面的/sex<br><br>​    $.get(“&lt;c:url value=’/sex’/&gt;”).done(<strong>function</strong>(ttt) {<br><br>​      $(“#data”).text(ttt);<br><br>​    });<br><br>  });<br><br></script><br><br></html>
+<p>关于mysql的语句，我们在这里简单地说几个</p>
+<p>1.创建数据库，后面的 character set utf8  是设置 数据库的编码方式 为utf8 （一般都会是utf8 ）</p>
+<p><img src="https://img-blog.csdn.net/2018071711063926?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>2，进入这个数据库</p>
+<p><img src="https://img-blog.csdn.net/2018071711081921?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>3，创建一个表</p>
+<p><img src="https://img-blog.csdn.net/20180717111106521?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>3，查看数据库下的表</p>
+<p><img src="https://img-blog.csdn.net/20180717111135388?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>这时会发现 我们刚才创建的表就出现了</p>
+<p>4，向表中写数据</p>
+<p><img src="https://img-blog.csdn.net/20180717111230105?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>基本操作就这些 其他操作，如删除表，删除字段等等 可自行百度查阅</p>
+<p>接下来呢，我们用java语句去操作数据库，即jdbc，关于jdbc 给大家一个lian链接 感觉写的挺不错，这里就不赘述了</p>
+<p><a href="https://www.cnblogs.com/wuyuegb2312/p/3872607.html" target="_blank" rel="noopener">https://www.cnblogs.com/wuyuegb2312/p/3872607.html</a></p>
+<p>这里我们使用DButils操作数据库。使用 c3p0做连接池，之所以使用连接池是因为每次操作数据库，都重新创建一个连接。Connection 使用连接池：保证连接的重用，回收连接。</p>
+<p>接下来呢，我么要做的就是要添加，c3p0的依赖，</p>
+<p><a href="https://mvnrepository.com/" target="_blank" rel="noopener">https://mvnrepository.com/</a> 然后搜索c3p0 找到相应的依赖，然后拷贝到我们的pom.xml 文件夹下 即可自动下载依赖</p>
+<p>​    <dependency></dependency></p>
+<p>​      <groupid>com.mchange</groupid></p>
+<p>​      <artifactid>c3p0</artifactid></p>
+<p>​      <version>0.9.5.2</version></p>
+<p>​    </p>
+<p>然后添加c3p0的配置文件 c3p0p-config.xml</p>
+<p>&lt;?xml version=<em>“1.0”</em> encoding=<em>“UTF-8”</em>?&gt;</p>
+<p><c3p0-config></c3p0-config></p>
+  <!-- 默认的配置 -->
+<p>  <default-config></default-config></p>
+<p>&lt;propertyname=<em>“jdbcUrl”</em>&gt;jdbc:mysql:///hyxy?characterEncoding=UTF8&amp;useUnicode=true&amp;useSSL=false</p>
+<p>​    &lt;property name=<em>“driverClass”</em>&gt;com.mysql.jdbc.Driver</p>
+<p>​    &lt;property name=<em>“user”</em>&gt;root</p>
+<p>​    &lt;property name=<em>“password”</em>&gt;1234</p>
+<p>​    <!--连接数据库的超时时间 --></p>
+<p>​    &lt;property name=<em>“checkoutTimeout”</em>&gt;3000</p>
+<p>​    <!--里面默认的初始化连接个数 --></p>
+<p>​    &lt;property name=<em>“initialPoolSize”</em>&gt;3</p>
+<p>​    <!-- 最多有多少连接 --></p>
+<p>​    &lt;property name=<em>“maxPoolSize”</em>&gt;10</p>
+<p>​    &lt;property name=<em>“minPoolSize”</em>&gt;3</p>
+<p>​    <!--一次批量处理，最多可以执行多少SQL语句,默认是50,50~200是一个合理的范围 --></p>
+<p>​    &lt;property name=<em>“maxStatements”</em>&gt;200</p>
+<p>  </p>
+<p></p>
+<h2 id="创建一个连接池，通过读取上面的配置文件"><a href="#创建一个连接池，通过读取上面的配置文件" class="headerlink" title="创建一个连接池，通过读取上面的配置文件"></a>创建一个连接池，通过读取上面的配置文件</h2><p>package cn.hyxy.zhenai.util;<br>import javax.sql.DataSource;<br>import com.mchange.v2.c3p0.ComboPooledDataSource;<br>public class DSUtils {<br>   //1:声明dataSour e<br>   private static DataSource DATASOURCE;<br>   //2:开发一个静态的代码块，只执行一次<br>   static {<br>     DATASOURCE = new ComboPooledDataSource();<br>   }<br>   //3:获取Da<br>   public static DataSource getDataSource() {<br>     return DATASOURCE;<br>   }<br>}</p>
+<h2 id="使用dbutils"><a href="#使用dbutils" class="headerlink" title="使用dbutils"></a>使用dbutils</h2><p>导入dbutils的依赖</p>
+<dependency>
 
-<p><img src="https://img-blog.csdn.net/20180718105115456?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>配置数据链接</p>
-<p><img src="https://img-blog.csdn.net/20180718105444279?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>开发后台</p>
-<p>package cn.lyh.zhenai.dao;</p>
-<p>import java.sql.SQLException;<br>import java.util.ArrayList;<br>import java.util.Arrays;<br>import java.util.HashMap;<br>import java.util.List;<br>import java.util.Map;<br>import java.util.Properties;</p>
-<p>import javax.sql.DataSource;</p>
-<p>import org.apache.commons.dbutils.QueryRunner;<br>import org.apache.commons.dbutils.handlers.ColumnListHandler;<br>import org.apache.commons.dbutils.handlers.MapHandler;<br>import org.apache.commons.dbutils.handlers.MapListHandler;<br>import org.apache.commons.dbutils.handlers.ScalarHandler;</p>
-<p>import cn.lyh.zhenai.utils.DSUtils;</p>
-<p>public class ZhenaiDao {<br>   private DataSource ds;</p>
-<p>   private ZhenaiDao() {<br>     ds = DSUtils.getDataSource();<br>   }</p>
-<p>   public static final ZhenaiDao DAO;<br>   static {<br>     DAO = new ZhenaiDao();<br>   }</p>
-<p>   public static ZhenaiDao getDao() {<br>     return DAO;<br>   }</p>
-<p>   // 查询<br>   public List&lt;Map&lt;String, Object&gt;&gt; querySex() {<br>     QueryRunner run = new QueryRunner(ds);<br>     String sql = “select sex as name,count(sex) as value from dogs group by sex”;<br>     List&lt;Map&lt;String, Object&gt;&gt; list = new ArrayList&lt;&gt;();<br>     try {<br>       list = run.query(sql, new MapListHandler());<br>     } catch (SQLException e) {<br>       e.printStackTrace();<br>     }<br>     return list;<br>   }<br>}</p>
-<p><strong>package</strong> cn.hyxy.zhenai.service;</p>
-<p><strong>import</strong> java.util.List;</p>
-<p><strong>import</strong> java.util.Map;</p>
-<p><strong>import</strong> cn.hyxy.zhenai.dao.ZhenaiDao;</p>
-<p><strong>public</strong> <strong>class</strong> ZhenaiService {</p>
-<p>  <strong>private</strong> ZhenaiDao dao;</p>
-<p>  <strong>private</strong> ZhenaiService() {</p>
-<p>​    dao = ZhenaiDao.<em>getDao</em>();</p>
-<p>  }</p>
-<p>  <strong>private</strong> <strong>static</strong> ZhenaiService <em>SERVICE</em>;</p>
-<p>  <strong>static</strong> {</p>
-<p>​    <em>SERVICE</em>=<strong>new</strong> ZhenaiService();</p>
-<p>  }</p>
-<p>  <strong>public</strong> <strong>static</strong> ZhenaiService getService() {</p>
-<p>​    <strong>return</strong> <em>SERVICE</em>;</p>
-<p>  }</p>
-<p>  //</p>
-<p>  <strong>public</strong> List&lt;Map&lt;String, Object&gt;&gt; querySex(){</p>
-<p>​    <strong>return</strong> dao.querySex();</p>
-<p>  }</p>
-<p>}</p>
-<p><strong>package</strong> cn.hyxy.zhenai;</p>
-<p><strong>import</strong> java.io.IOException;</p>
-<p><strong>import</strong> java.util.List;</p>
-<p><strong>import</strong> java.util.Map;</p>
-<p><strong>import</strong> java.util.Random;</p>
-<p><strong>import</strong> javax.servlet.ServletException;</p>
-<p><strong>import</strong> javax.servlet.annotation.WebServlet;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServlet;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServletRequest;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServletResponse;</p>
-<p><strong>import</strong> com.alibaba.fastjson.JSONArray;</p>
-<p><strong>import</strong> cn.hyxy.zhenai.service.ZhenaiService;</p>
-<p>@WebServlet(“/sex”) // <a href="http://localhos/zhenaiweb/sex" target="_blank" rel="noopener">http://localhos/zhenaiweb/sex</a></p>
-<p><strong>public</strong> <strong>class</strong> SexServlet <strong>extends</strong> HttpServlet {</p>
-<p>  @Override</p>
-<p>  <strong>public</strong> <strong>void</strong> doGet(HttpServletRequest req, HttpServletResponse resp) <strong>throws</strong> ServletException, IOException {</p>
-<p>​    Random r = <strong>new</strong> Random();</p>
-<p>​    <strong>int</strong> male = r.nextInt(1000);</p>
-<p>​    <strong>int</strong> female = r.nextInt(1000);</p>
-<p>​    resp.setContentType(“text/plain;charset=UTF-8”);</p>
-<p>​    //获取数据</p>
-<p>​    ZhenaiService ss = ZhenaiService.<em>getService</em>();</p>
-<p>​    List&lt;Map&lt;String, Object&gt;&gt; list = ss.querySex();</p>
-<p>​    //</p>
-<p>​    String json = JSONArray.<em>toJSONString</em>(list);</p>
-<p>​    resp.getWriter().print(json);</p>
-<p>  }</p>
-<p>}</p>
-<p>这样呢我们的 男女性别 分析 就做完了</p>
-<p><img src="https://img-blog.csdn.net/20180718110149363?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>效果如图所示</p>
-<p>接下来呢我们以同样的方法来分析 学历 不过这次我们用的是柱状图、</p>
-<p>先看百度示例</p>
-<p><img src="https://img-blog.csdn.net/20180718110353815?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>option = {</p>
-<p>  xAxis: {</p>
-<p>​    type: ‘category’,</p>
-<p>​    data: [‘Mon’, ‘Tue’, ‘Wed’, ‘Thu’, ‘Fri’, ‘Sat’, ‘Sun’]</p>
-<p>  },</p>
-<p>  yAxis: {</p>
-<p>​    type: ‘value’</p>
-<p>  },</p>
-<p>  series: [{</p>
-<p>​    data: [120, 200, 150, 80, 70, 110, 130],</p>
-<p>​    type: ‘bar’</p>
-<p>  }]</p>
-<p>};</p>
-<h2 id="模拟上面的数据"><a href="#模拟上面的数据" class="headerlink" title="模拟上面的数据"></a>模拟上面的数据</h2><p>//1:获取元素</p>
-<p>  <strong>var</strong> myChart2 = echarts.init(document.getElementById(‘data2’));</p>
-<p>  //2：声明数据</p>
-<p>  <strong>var</strong> option2 = {</p>
-<p>​    xAxis : {</p>
-<p>​      type : ‘category’,</p>
-<p>​      data : [ ‘Mon’, ‘Tue’, ‘Wed’, ‘Thu’, ‘Fri’, ‘Sat’, ‘Sun’ ]</p>
-<p>​    },</p>
-<p>​    yAxis : {</p>
-<p>​      type : ‘value’</p>
-<p>​    },</p>
-<p>​    series : [ {</p>
-<p>​      data : [ 120, 200, 150, 80, 70, 110, 130 ],</p>
-<p>​      type : ‘bar’</p>
-<p>​    } ]</p>
-<p>  };</p>
-<p>  //设置值</p>
-<p>  myChart2.setOption(option2);</p>
-<p>出现以下的数据：</p>
-<p><img src="https://img-blog.csdn.net/20180718110457543?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>–添加更多的的数据：</p>
-<p>//1:获取元素</p>
-<p>  <strong>var</strong> myChart2 = echarts.init(document.getElementById(‘data2’));</p>
-<p>  //2：声明数据</p>
-<p>  <strong>var</strong> option2 = {</p>
-<p>​    legend : {</p>
-<p>​      data : [ ‘男’, ‘女’ ]</p>
-<p>​    },</p>
-<p>​    xAxis : {</p>
-<p>​      type : ‘category’,</p>
-<p>​      data : [ ‘高中’, ‘专科’, ‘本科’ ]</p>
-<p>​    },</p>
-<p>​    yAxis : {</p>
-<p>​      type : ‘value’</p>
-<p>​    },</p>
-<p>​    series : [ {</p>
-<p>​      name : ‘男’,</p>
-<p>​      data : [ 120, 200, 150 ],</p>
-<p>​      label : {</p>
-<p>​        show : <strong>true</strong>,</p>
-<p>​        position:’inside’,</p>
-<p>​        formatter:<strong>function</strong>(param){</p>
-<p>​          <strong>return</strong> param.value+”人”;</p>
-<p>​        }</p>
-<p>​      },</p>
-<p>​      type : ‘bar’</p>
-<p>​    }, {</p>
-<p>​      name : ‘女’,</p>
-<p>​      data : [ 70, 110, 130 ],</p>
-<p>​      label : {</p>
-<p>​        show : <strong>true</strong></p>
-<p>​      },</p>
-<p>​      type : ‘bar’</p>
-<p>​    } ]</p>
-<p>  };</p>
-<p>  //设置值</p>
-<p>  myChart2.setOption(option2);</p>
-<p><img src="https://img-blog.csdn.net/20180718110532424?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h2 id="从数据库中获取数据"><a href="#从数据库中获取数据" class="headerlink" title="从数据库中获取数据"></a>从数据库中获取数据</h2><h3 id="1：确定有多少学历"><a href="#1：确定有多少学历" class="headerlink" title="1：确定有多少学历"></a>1：确定有多少学历</h3><p><img src="https://img-blog.csdn.net/20180718110744368?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<h3 id="查询每一种学历，男的，女的各多少人"><a href="#查询每一种学历，男的，女的各多少人" class="headerlink" title="查询每一种学历，男的，女的各多少人"></a>查询每一种学历，男的，女的各多少人</h3><h3 id="然后根据要求组织数据"><a href="#然后根据要求组织数据" class="headerlink" title="然后根据要求组织数据"></a>然后根据要求组织数据</h3><p><img src="https://img-blog.csdn.net/20180718110904414?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
-<p>[ {</p>
-<p>​      name : ‘男’,</p>
-<p>​      data : [ 120, 200, 150 ],</p>
-<p>​      </p>
-<p>​    }, {</p>
-<p>​      name : ‘女’,</p>
-<p>​      data : [ 70, 110, 130 ],</p>
-<p>​      </p>
-<p>​    } ]</p>
-<h1 id="提供模拟数据"><a href="#提供模拟数据" class="headerlink" title="提供模拟数据"></a>提供模拟数据</h1><p><strong>package</strong> cn.lyh.zhenai;</p>
-<p><strong>import</strong> java.io.IOException;</p>
-<p><strong>import</strong> java.util.Random;</p>
-<p><strong>import</strong> javax.servlet.ServletException;</p>
-<p><strong>import</strong> javax.servlet.annotation.WebServlet;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServlet;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServletRequest;</p>
-<p><strong>import</strong> javax.servlet.http.HttpServletResponse;</p>
-<p>@WebServlet(“/sexgrade”)</p>
-<p><strong>public</strong> <strong>class</strong> SexGradeServlet <strong>extends</strong> HttpServlet {</p>
-<p>  @Override</p>
-<p>  <strong>public</strong> <strong>void</strong> doGet(HttpServletRequest req, HttpServletResponse resp) <strong>throws</strong> ServletException, IOException {</p>
-<p>​    <strong>int</strong> a = <strong>new</strong> Random().nextInt(100);</p>
-<p>​    String json = “[{‘name’:’男’,’data’:[“+a+”,210,150]},{‘name’:’女’,’data’:[ 80, 110, 130 ]}]”;</p>
-<p>​    //输出这个数据</p>
-<p>​    resp.setContentType(“text/plain;charset=UTF-8”);</p>
-<p>​    resp.getWriter().print(json);</p>
-<p>  }</p>
-<p>}</p>
-<p>delete frome doges where grade !=’中专’ and grade !=’大专’ and grade !=’大学本科’ and grade !=’高中及以下’ and grade !=’硕士’ and grade !=’博士’</p>
-<h2 id="获取真实的数据"><a href="#获取真实的数据" class="headerlink" title="获取真实的数据"></a><strong>获取真实的数据</strong></h2><p>public Map&lt;String, Object&gt; querySexGrade() {<br>     // 声明返回的数据 -DAO - &gt; DataAccess Object<br>     Map&lt;String, Object&gt; map = new HashMap&lt;&gt;();<br>     try {<br>       List<string> list = new ArrayList&lt;&gt;();<br>       // 声明SQL语句<br>       String sql = “SELECT DISTINCT grade FROM dogs WHERE grade !=’–’”;<br>       QueryRunner run = new QueryRunner(ds);<br>       list = run.query(sql, new ColumnListHandler<string>());</string></string></p>
-<p>​       map.put(“legend”, list);<br>​       // 声明数据<br>​       List&lt;Map&lt;String, Object&gt;&gt; datas = new ArrayList&lt;&gt;();<br>​       // 声明男<br>​       // 声明男生的数量，和女生的数量的集合<br>​       List<integer> maleDatas = new ArrayList&lt;&gt;();<br>​       List<integer> femaleDatas = new ArrayList&lt;&gt;();</integer></integer></p>
-<p>​       // 查询男，各种学历<br>​       for (String grade : list) {<br>​         String sqlA = “SELECT COUNT(1) FROM dogs WHERE grade=? AND sex=’女’”;<br>​         String sqlB = “SELECT COUNT(1) FROM dogs WHERE grade=? AND sex=’男’”;<br>​         int cnt = run.query(sqlA, new ScalarHandler<long>(), grade).intValue();<br>​         femaleDatas.add(cnt);<br>​         cnt = run.query(sqlB, new ScalarHandler<long>(), grade).intValue();<br>​         maleDatas.add(cnt);<br>​       }</long></long></p>
-<p>​       Map&lt;String, Object&gt; male = new HashMap&lt;&gt;();<br>​       male.put(“name”, “男”);<br>​       male.put(“data”, maleDatas);<br>​       datas.add(male);</p>
-<p>​       Map&lt;String, Object&gt; female = new HashMap&lt;&gt;();<br>​       female.put(“name”, “女”);<br>​       female.put(“data”, femaleDatas);<br>​       datas.add(female);<br>​       //<br>​       map.put(“datas”, datas);</p>
-<p>​     } catch (Exception e) {<br>​       throw new RuntimeException(e);<br>​     }<br>​     return map;<br>   }<br><img src="https://img-blog.csdn.net/20180718111256978?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动">​</p>
-<p>然后我们就做出了如图所示的报表</p>
-<p>大家可以照猫画虎，分析住房，年龄，等等，若遇到什么问题 欢迎在评论区评论，我会在第一时间帮助你哦，明天我将会为大家分享地图报表的制作哦！</p>
+<p>​      <groupid>commons-dbutils</groupid></p>
+<p>​      <artifactid>commons-dbutils</artifactid></p>
+<p>​      <version>1.7</version></p>
+<p>​    </p></dependency><br><strong>然后呢我们就要根据我们所获取数据的结构，制做mysql的表</strong><p></p>
+<p><img src="https://img-blog.csdn.net/20180717113408420?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><strong>我们来设计我们的表格</strong></p>
+<p>输入指令 ，来创建这个表格</p>
+<p>CREATE TABLE dogs(</p>
+<p>  id BIGINT,</p>
+<p>  NAME VARCHAR(50),</p>
+<p>  age INT,</p>
+<p>  workaddr VARCHAR(20),</p>
+<p>  height INT,</p>
+<p>  salary VARCHAR(30),</p>
+<p>  homeaddr VARCHAR(30),</p>
+<p>  married VARCHAR(10),</p>
+<p>  grade VARCHAR(10),</p>
+<p>  worker VARCHAR(20),</p>
+<p>  house VARCHAR(10),</p>
+<p>  car VARCHAR(10),</p>
+<p>  sex VARCHAR(10)</p>
+<p>);</p>
+<p>然后我们利用程序 将爬取的数据写入到数据库，为了更可观的查看我们爬取的数据，我们可以利用数据库管理和开发工具</p>
+<p>例如navicat premium</p>
+<p>将数据写入到数据库中，在spider 中写一个方法 ，传入我们所获取的信息，利用这个方法将我们传进的信息，写入到数据库中</p>
+<p>   public void insert(String sql, String id, String name,String sex, String age, String workaddr, String height, String salary,<br>       String homeaddr, String married, String grade, String worker, String house, String car) throws Exception {<br>     QueryRunner run = new QueryRunner(DSUtils.getDataSource());<br>     run.update(sql, id, name,sex, age, workaddr, height, salary, homeaddr, married, grade, worker, house, car);<br>   }</p>
+<p>这样呢我们就成功将我们获取的信息写入到我们的数据库了 然后将spider 跑起来 其获取信息</p>
+<p><img src="https://img-blog.csdn.net/20180717115454166?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>我们的爬虫到这儿 就完成了，下次我们就要利用这些数据做成报表，使信息更可观的表现如下图</p>
+<p><img src="https://img-blog.csdn.net/20180717115737652?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdn.net/20180717115811176?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdn.net/20180717115838418?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdn.net/20180717115910128?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p><img src="https://img-blog.csdn.net/20180717115929933?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpZmVpbmloYW8=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>诸如此类，大家可自行设计不同的报表类型，明天再和大家继续分享，文中若有不足，欢迎大家的指正。</p>
 
       </div>
       
@@ -691,7 +561,7 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-19T11:06:21+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-10-19T11:14:29+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
     <p>更新于 2020年10月19日</p>
@@ -781,7 +651,7 @@
                       <span class="art-item-left">
                           <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
                           <h4>
-                              <a href="/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（三）/" rel="prev" title="">
+                              <a href="/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（二）/" rel="prev" title="">
                                 
                                     2020-10-19 星期一
                                 
@@ -1006,7 +876,7 @@
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1，下载与安装tomacat"><span class="toc-text">1，下载与安装tomacat</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2，接下来我们就要把服务器和eclipse-集成"><span class="toc-text">2，接下来我们就要把服务器和eclipse 集成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3，servlet-jsp"><span class="toc-text">3，servlet +jsp</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-text">来自珍爱网的数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#null"><span class="toc-text">来自珍爱网的数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#模拟上面的数据"><span class="toc-text">模拟上面的数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从数据库中获取数据"><span class="toc-text">从数据库中获取数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1：确定有多少学历"><span class="toc-text">1：确定有多少学历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查询每一种学历，男的，女的各多少人"><span class="toc-text">查询每一种学历，男的，女的各多少人</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#然后根据要求组织数据"><span class="toc-text">然后根据要求组织数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#提供模拟数据"><span class="toc-text">提供模拟数据</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#获取真实的数据"><span class="toc-text">获取真实的数据</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mysql"><span class="toc-text">Mysql</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建一个连接池，通过读取上面的配置文件"><span class="toc-text">创建一个连接池，通过读取上面的配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用dbutils"><span class="toc-text">使用dbutils</span></a></li></ol></li></ol>
     </div>
   </section>
 
