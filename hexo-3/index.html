@@ -6,7 +6,7 @@
   
   <title>使用hexo搭建博客（四） | 风晓博客</title>
   
-  <meta name="keywords" content="风晓,风晓博客,计算机,爬虫,李永宏">
+  <meta name="keywords" content="风晓,风晓博客,计算机,爬虫,李永宏,前端,h5,css,vue,springboot,博客,风晓的博客">
   
   
   <meta name="description" content="一个喜欢瞎玩的博主">
@@ -431,7 +431,7 @@
 <h1 id="云服务器配置"><a href="#云服务器配置" class="headerlink" title="云服务器配置"></a>云服务器配置</h1><h2 id="Git，nodejs，Nginx等安装"><a href="#Git，nodejs，Nginx等安装" class="headerlink" title="Git，nodejs，Nginx等安装"></a>Git，nodejs，Nginx等安装</h2><p>具体安装过程可自行百度</p>
 <h2 id="创建git新用户以及进行配置"><a href="#创建git新用户以及进行配置" class="headerlink" title="创建git新用户以及进行配置"></a>创建git新用户以及进行配置</h2><h3 id="创建git新用户"><a href="#创建git新用户" class="headerlink" title="创建git新用户"></a>创建git新用户</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">adduser git #加入git用户</span><br><span class="line">passwd git #配置你的密码</span><br><span class="line">chmod 740 /etc/sudoers/ #修改git的sudo使用权限为只读</span><br><span class="line">vim /etc/sudoers #编辑sudoers</span><br></pre></td></tr></table></figure>
 <p>打开sudoers，找到以下内容</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span># Allow root to run any commands anywhere</span><br><span class="line">root    ALL=(ALL)       ALL</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"><span class="comment"># Allow root to run any commands anywhere</span></span></span><br><span class="line">root    ALL=(ALL)       ALL</span><br></pre></td></tr></table></figure>
 <p>在他的下面加入以下内容</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git ALL=(ALL)   ALL</span><br></pre></td></tr></table></figure>
 <p>然后wq保存，并且将权限修改回来</p>

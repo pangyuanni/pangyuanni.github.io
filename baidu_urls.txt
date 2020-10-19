@@ -1,3 +1,5 @@
+http://www.windknew.com/Spring Data Jpa/
+http://www.windknew.com/hello-world/
 http://www.windknew.com/java-8/
 http://www.windknew.com/java-6/
 http://www.windknew.com/java-5/

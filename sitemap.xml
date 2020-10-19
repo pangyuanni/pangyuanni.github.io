@@ -2,143 +2,231 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.windknew.com/java-8/</loc>
+    <loc>http://www.windknew.com/Spring%20Data%20Jpa/</loc>
     
-    <lastmod>2020-02-20T01:31:31.622Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java-6/</loc>
-    
-    <lastmod>2020-02-20T01:19:51.723Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java-1/</loc>
-    
-    <lastmod>2020-02-13T02:04:03.300Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java-2/</loc>
-    
-    <lastmod>2020-02-13T02:04:00.436Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java-3/</loc>
-    
-    <lastmod>2020-02-13T02:03:57.402Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java-4/</loc>
-    
-    <lastmod>2020-02-13T02:03:54.003Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java-5/</loc>
-    
-    <lastmod>2020-02-13T02:03:50.166Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/java/</loc>
-    
-    <lastmod>2020-02-13T02:03:41.173Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.windknew.com/404.html</loc>
-    
-    <lastmod>2020-02-13T01:22:28.549Z</lastmod>
+    <lastmod>2020-10-14</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/wenquanketang-spider/</loc>
     
-    <lastmod>2020-02-10T08:14:32.766Z</lastmod>
+    <lastmod>2020-09-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/hello-world/</loc>
+    
+    <lastmod>2020-09-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-8/</loc>
+    
+    <lastmod>2020-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-6/</loc>
+    
+    <lastmod>2020-02-20</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-1/</loc>
+    
+    <lastmod>2020-02-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-2/</loc>
+    
+    <lastmod>2020-02-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-3/</loc>
+    
+    <lastmod>2020-02-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-4/</loc>
+    
+    <lastmod>2020-02-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java-5/</loc>
+    
+    <lastmod>2020-02-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/java/</loc>
+    
+    <lastmod>2020-02-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/404.html</loc>
+    
+    <lastmod>2020-02-13</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/spider-wenquanketang/</loc>
     
-    <lastmod>2020-02-10T08:14:15.056Z</lastmod>
+    <lastmod>2020-02-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/hexo-3/</loc>
     
-    <lastmod>2020-02-10T08:11:55.804Z</lastmod>
+    <lastmod>2020-02-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/hexo-2/</loc>
     
-    <lastmod>2020-02-10T08:11:42.570Z</lastmod>
+    <lastmod>2020-02-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/hexo-1/</loc>
     
-    <lastmod>2020-02-10T08:11:26.806Z</lastmod>
+    <lastmod>2020-02-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/hexo/</loc>
     
-    <lastmod>2020-02-10T08:09:45.001Z</lastmod>
+    <lastmod>2020-02-10</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/friends/index.html</loc>
     
-    <lastmod>2020-01-27T05:03:26.128Z</lastmod>
+    <lastmod>2020-01-27</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/about/index.html</loc>
     
-    <lastmod>2020-01-27T05:00:25.764Z</lastmod>
+    <lastmod>2020-01-27</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/projects/index.html</loc>
     
-    <lastmod>2020-01-23T02:49:33.689Z</lastmod>
+    <lastmod>2020-01-23</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/blog/tags/index.html</loc>
     
-    <lastmod>2020-01-23T02:49:33.687Z</lastmod>
+    <lastmod>2020-01-23</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.windknew.com/blog/categories/index.html</loc>
     
-    <lastmod>2020-01-23T02:49:33.686Z</lastmod>
+    <lastmod>2020-01-23</lastmod>
     
+  </url>
+  
+
+  <url>
+    <loc>http://www.windknew.com/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  
+  <url>
+    <loc>http://www.windknew.com/blog/tags/hexo/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/tags/blog/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/tags/%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/tags/java/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/tags/python/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+
+  
+  <url>
+    <loc>http://www.windknew.com/blog/categories/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/categories/java/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.windknew.com/blog/categories/python/</loc>
+    <lastmod>2020-10-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
   </url>
   
 </urlset>

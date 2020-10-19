@@ -1,46 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.windknew.com/Spring%20Data%20Jpa/</loc>
+    <lastmod>2020-10-14</lastmod>
+  </url>
+  <url>
+    <loc>http://www.windknew.com/wenquanketang-spider/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
+    <loc>http://www.windknew.com/hello-world/</loc>
+    <lastmod>2020-09-09</lastmod>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-8/</loc>
     <lastmod>2020-02-20</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-6/</loc>
     <lastmod>2020-02-20</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-1/</loc>
     <lastmod>2020-02-13</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-2/</loc>
     <lastmod>2020-02-13</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-3/</loc>
     <lastmod>2020-02-13</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-4/</loc>
     <lastmod>2020-02-13</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java-5/</loc>
     <lastmod>2020-02-13</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/java/</loc>
     <lastmod>2020-02-13</lastmod>
-  </url>  <url>
-    <loc>http://www.windknew.com/wenquanketang-spider/</loc>
-    <lastmod>2020-02-10</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/spider-wenquanketang/</loc>
     <lastmod>2020-02-10</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/hexo-3/</loc>
     <lastmod>2020-02-10</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/hexo-2/</loc>
     <lastmod>2020-02-10</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/hexo-1/</loc>
     <lastmod>2020-02-10</lastmod>
-  </url>  <url>
+  </url>
+  <url>
     <loc>http://www.windknew.com/hexo/</loc>
     <lastmod>2020-02-10</lastmod>
   </url>
-</urlset>
+</urlset> 
