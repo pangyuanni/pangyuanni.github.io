@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>使用hexo 搭建博客(一) | 风晓博客</title>
+  <title>XenServer服务搭建（8.2） | 风晓博客</title>
   
   <meta name="keywords" content="风晓,风晓博客,计算机,爬虫,李永宏,前端,h5,css,vue,springboot,博客,风晓的博客">
   
@@ -311,8 +311,8 @@
         
   
     <h1 class="title">
-      <a href="/hexo/">
-        使用hexo 搭建博客(一)
+      <a href="/Xenserver服务搭建/">
+        XenServer服务搭建（8.2）
       </a>
     </h1>
   
@@ -343,7 +343,7 @@
             <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2020-01-30</p>
+    <p>2020-11-04</p>
   </a>
 </div>
 
@@ -353,9 +353,9 @@
             
   
   <div class='new-meta-item category'>
-    <a href='/blog/categories/教程/' rel="nofollow">
+    <a href='/blog/categories/运维/' rel="nofollow">
       <i class="fas fa-folder-open" aria-hidden="true"></i>
-      <p>教程</p>
+      <p>运维</p>
     </a>
   </div>
 
@@ -387,14 +387,14 @@
       <a class='notlink'>
         <i class="fas fa-keyboard" aria-hidden="true"></i>
         <p>字数统计:</p>
-        <p>1k字</p>
+        <p>1.6k字</p>
       </a>
     </div>
     <div class="new-meta-item readtime">
       <a class='notlink'>
         <i class="fas fa-hourglass-half" aria-hidden="true"></i>
         <p>阅读时长≈</p>
-        <p>3分</p>
+        <p>5分</p>
       </a>
     </div>
   
@@ -416,35 +416,129 @@
 
     <section class="article typo">
       <div class="article-entry" itemprop="articleBody">
-        <h1 id="使用Hexo搭建博客（一）"><a href="#使用Hexo搭建博客（一）" class="headerlink" title="使用Hexo搭建博客（一）"></a>使用Hexo搭建博客（一）</h1><h2 id="引言："><a href="#引言：" class="headerlink" title="引言："></a>引言：</h2><p>   本来刚开始想用python的django框架进行个人博客的搭建，但是使用python框架进行搭建的话， 但是进行到一半就不想干了，因为代码量太复杂，太繁琐，后来在网上发现了hexo这个专业的博客框架，搭建起来比较django省时省力，就决定用Hexo来搭建，在本地搭建没什么问题，但部署在云服务器的过程异常艰难。但最终，在神器——百度 的帮助下，问题全部解决</p>
-<h2 id="Hexo-说明"><a href="#Hexo-说明" class="headerlink" title="Hexo 说明"></a>Hexo 说明</h2><p>Hexo是基于nodeJS环境的静态博客，简单来说就是轻量，简易，高逼格的博客工具，hexo是将markdown文件生成静态的html然后将生成的html上传到我们的服务器，简而言之：hexo是个静态页面生成，上传的工具</p>
-<h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2><p>先安利一个在windows下非常好用的命令行工具<a href="https://cmder.net/" target="_blank" rel="noopener">cmder</a>,关于他的好用之处，在另一篇博客有详细说明</p>
-<ol>
-<li><p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a> 下载后，双击打开安装，也是一路next，不过在Custom Setup这一步记得选 <code>Add to PATH</code> ,这样你就不用自己去配置电脑上环境变量了</p>
+        <hr>
+<h2 id="XenServer"><a href="#XenServer" class="headerlink" title="XenServer"></a>XenServer</h2><hr>
+<h3 id="XenServer简介"><a href="#XenServer简介" class="headerlink" title="XenServer简介"></a>XenServer简介</h3><p>Citrix Xenserver，思杰基于Xen的虚拟化服务器。Citrix XenServer是一种全面而易于管理的<a href="https://baike.baidu.com/item/服务器虚拟化/2639077" target="_blank" rel="noopener">服务器虚拟化</a>平台，基于强大的 Xen Hypervisor 程序之上。Xen技术被广泛看作是业界最快速、最安全的<a href="https://baike.baidu.com/item/虚拟化软件/3765902" target="_blank" rel="noopener">虚拟化软件</a>。XenServer 是为了高效地管理 Windows(R) 和 Linux(R)<a href="https://baike.baidu.com/item/虚拟服务器/5799459" target="_blank" rel="noopener">虚拟服务器</a>而设计的，可提供经济高效的服务器整合和<a href="https://baike.baidu.com/item/业务连续性/5034951" target="_blank" rel="noopener">业务连续性</a>。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<li><p>在XenServer官网下载<a href="https://xenserver.org/open-source-virtualization-download.html" target="_blank" rel="noopener">ISO文件</a>，需要注册账号；</p>
 </li>
-<li><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a> 下载安装，下载后一路next就好</p>
+<li><p>利用镜像制作软件做启动盘,我这里用的是<a href="https://cn.ultraiso.net/uiso9_cn.exe" target="_blank" rel="noopener">UltraISO</a>,关于镜像的写入，链接里都有相关教程</p>
 </li>
-<li><p>用npm安装Hexo</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  // npm是安装Nodejs一起安装的包管理工具</span><br></pre></td></tr></table></figure>
+<li><p>安装<strong>XenServer</strong>的服务器CPU必须支持虚拟化，Intel (VT-X) 或者AMD (AMD-V)</p>
+</li>
+<li><p>服务器选择u盘启动</p>
 </li>
 </ol>
-<p>这样我们的hexo在本地就差不多完成了，然后我们新建一个空的文件夹，进去初始化博客（这里我新建一个blog的文件夹）然后输入下列命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init # hexo会在目标文件夹简历网站所需要的所有文件</span><br><span class="line">npm install # 安装依赖包</span><br></pre></td></tr></table></figure>
-<p>也可以使用 hexo init  <folder>，其中 <folder>为保存Hexo的项目路径，然后就等待clone，就会把各种配置文件下载到你的文件夹中了，</folder></folder></p>
-<p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129052843085.png" alt=""></p>
-<h3 id="本地启动"><a href="#本地启动" class="headerlink" title="本地启动"></a>本地启动</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g #等同于hexo generate,胜场静态文件到public文件夹</span><br><span class="line">hexo s # 等同于hexo server,在本地服务器运行</span><br></pre></td></tr></table></figure>
-<p>还有一个命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #作为清除静态文件夹的内容并删掉，主要用于更改变更了某些地方导致页面显示不完善</span><br></pre></td></tr></table></figure>
-<p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129052936282.png" alt=""></p>
-<p>之后就可以打开浏览器并输入ip地址<a href="http://localhost:4000/查看，效果如下" target="_blank" rel="noopener">http://localhost:4000/查看，效果如下</a></p>
-<p><img src="http://q4uie93wz.bkt.clouddn.com/django/20200129053008515.png" alt=""></p>
-<h3 id="新建页面和文章"><a href="#新建页面和文章" class="headerlink" title="新建页面和文章"></a>新建页面和文章</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new 'title' #生成新文章，路径在:\source\_post\title.md</span><br><span class="line">hexo new page 'title' #生成新页面,可在主题配置文件中配置页面</span><br></pre></td></tr></table></figure>
-<p>生成文章或页面的模板放在博客文件夹根目录下的 scaffolds/ 文件夹里面，文章对应的是 post.md ，页面对应的是page.md，草稿的是draft.md</p>
-<h3 id="编辑文章"><a href="#编辑文章" class="headerlink" title="编辑文章"></a>编辑文章</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Start My Blog Trip — Power By Hexo  # 文章页面上的显示名称，可以任意修改，不会出现在URL中</span><br><span class="line">date: 2017-2-10 23:49:28  # 文章生成时间，一般不改</span><br><span class="line">categories: diary  # 文章分类目录，多个分类使用[a,b,c]这种格式</span><br><span class="line">tags: [Hexo,diary]  # 文章标签</span><br><span class="line">---</span><br><span class="line"><span class="meta">#</span><span class="bash">这里开始使用markdown格式输入你的正文。</span></span><br><span class="line">&lt;!--more--&gt; </span><br><span class="line"><span class="meta">#</span><span class="bash">more标签以下的内容要点击“阅读全文”才能看见，<span class="comment">#more标签以上的内容为你首页显示文章的摘要部分</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="Markdown文章编辑"><a href="#Markdown文章编辑" class="headerlink" title="Markdown文章编辑"></a>Markdown文章编辑</h3><p>如果不熟悉MD语法，可以去百度，B站找教学，不难，常用的语法就那么几个</p>
-<p>再给大家安利个md文章神器<a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>,还有hexo文章神器<a href="http://pdidc.jb51.net:81/201903/tools/HexoEdit32_jb51.rar" target="_blank" rel="noopener">HexoEditor</a></p>
-<h3 id="常用命令总结"><a href="#常用命令总结" class="headerlink" title="常用命令总结"></a>常用命令总结</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo init [folder] # 初始化一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站</span><br><span class="line">hexo new [layout] &lt;title&gt; # 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来</span><br><span class="line">hexo version # 查看版本</span><br><span class="line">hexo clean # 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo g # 等于hexo generate # 生成静态文件</span><br><span class="line">hexo s # 等于hexo server # 本地预览</span><br><span class="line">hexo d # 等于hexo deploy # 部署，可与hexo g合并为 hexo d -g</span><br></pre></td></tr></table></figure>
-<p>本篇文章先到这儿，下篇文章给大家分享分享打造个性化的hexo-blog</p>
+<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><p>  一、选择键盘类型：US。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271934291935826.png" alt="img"></p>
+<p>二、这个是欢迎界面，选择“OK”即可。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271934596613818.png" alt="img"></p>
+<p>三、这个是使用协议，我们必须得接受，否则就不能继续安装了！</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271935349431006.png" alt="img"></p>
+<p>四、这个是警告，告诉你XenServer所需要的硬件条件，我们选择“OK”即可。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271936087869666.png" alt="img"></p>
+<p>六、这个是存储设备选择界面，第一个是本地磁盘—sda;第二个是自动精简配置—thin provisioning ，主要是针对XenDesktop MCS，如果想详细了解，可以上查查。我们这里就直接选择本地。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271936441939582.png" alt="img"></p>
+<p>七、这个是安装方式选择界面，一共有三种：本地、HTTP/FTP、NFS，我们这里直接用本地，一般在公司都会用ftp或nfs通过网络安装。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271937149114032.png" alt="img"></p>
+<p>八，提示我们，要不要追加安装补丁包，我们不用就直接选择“NO”。</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/271937456307481.png" alt="img"></p>
+<p>九、光盘验证，这里提示让我们选择要不要验证我们的安装光盘有没有错，第一为忽略，即直接跳过，第二个为验证安装源，我们的选择跳过即可。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271938149747917.png" alt="img"></p>
+<p>十、这里要我们输入root的密码，一般在企业中，我们的密码最好复杂些并且要记下来。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271938490995791.png" alt="img"></p>
+<p>十一、这里为XenServer主机的网络设置，有DHCP自动获取和静态IP两种，具体情况要看个人的安装网络环境。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271939265995335.png" alt="img"></p>
+<p>十二、这里为配置XenServer主机的主机名与DNS。DNS 就是公司的DNS服务器，不懂就问网管了。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271940110687215.png" alt="img"></p>
+<p>十三、区时选择，我们选择亚洲—“Asia”。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271940353804755.png" alt="img"></p>
+<p>十四、具体时区，我们直接使用上海—“Shanghai”即可。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271941104115485.png" alt="img"></p>
+<p>十五、这个是设置NTP，主要是与校准时钟有关，特别是在服务器集群时，我们所有的服务器时间必须得一致，否则很容易出现一些很奇怪的问题。当然，你也可以都选择第二个，本地时间，这个的话，就不必设置ntpserver了，不过它为在安装结束后让你手动设置时间的。NTPServer可以到<a href="http://www.ntp.org/" target="_blank" rel="noopener">http://www.ntp.org/</a> 这里看看如何设置。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271941401151878.png" alt="img"></p>
+<p>十六、安装界面</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271942067551273.png" alt="img"></p>
+<p>十七、安装过程</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271942420521690.png" alt="img"></p>
+<p>安装完毕后，它会提示让你重启，重新启动后即可完成XenServer8.2的安装。</p>
+<p>一，IP地址的配置，XenServer 安装好之后，就是这个界面了。可以配置IP 地址，DNS等。</p>
+<p><img src="https://images0.cnblogs.com/blog2015/101934/201504/271943192861547.jpg" alt="img"></p>
+<h3 id="安装过程中遇到的问题"><a href="#安装过程中遇到的问题" class="headerlink" title="安装过程中遇到的问题"></a>安装过程中遇到的问题</h3><p><strong>1.  进行时第二步中出现，this host does not appear to have ang network interfaces </strong></p>
+<p> 解决方案：Xenserver版本问题，更换新的Xenserver版本。（刚开始用的7.0，后来换的8.2  没有出现此问题）</p>
+<p><strong>2.安装完之后出现界面不能加载，如下图问题</strong></p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201103171353241.png" alt="image-20201103171353241"></p>
+<p>解决方案：rm -rf /etc/modules-load.d/，删除之后即可正常启动，具体原因是由于内核加载文件版本较旧，删除之后会更新内核加载文件</p>
+<h2 id="XenCenter"><a href="#XenCenter" class="headerlink" title="XenCenter"></a>XenCenter</h2><h3 id="XenCenter-简介"><a href="#XenCenter-简介" class="headerlink" title="XenCenter 简介"></a>XenCenter 简介</h3><p>​    XenCenter是用来管理和维护XenServer主机的，创建、管理、删除虚拟机等几乎所有的操作都在XenCenter中完成</p>
+<p>   简单来说XenCenter就是XenServer的管理工具</p>
+<h3 id="XenCenter-安装"><a href="#XenCenter-安装" class="headerlink" title="XenCenter 安装"></a>XenCenter 安装</h3><ol>
+<li>浏览器输入XenServer的Ip，得到以下Web页面</li>
+</ol>
+<p>   <img src="https://gitee.com/yhndbd/img/raw/master/image-20201103173403257.png" alt="image-20201103173403257"></p>
+<ol start="2">
+<li>页面说明</li>
+</ol>
+<p>   <img src="https://gitee.com/yhndbd/img/raw/master/image-20201103175048374.png" alt="image-20201103173824818"></p>
+<ol start="3">
+<li>点击Xencenter的下载链接进去下载然后进行安装</li>
+</ol>
+<h3 id="XenCenter安装过程中出现的问题及解决方法"><a href="#XenCenter安装过程中出现的问题及解决方法" class="headerlink" title="XenCenter安装过程中出现的问题及解决方法"></a>XenCenter安装过程中出现的问题及解决方法</h3><ol>
+<li><p>windows的.Net版本过低，安装不了，如下图</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201103173824818.png" alt="image-20201103175048374"></p>
+<p>解决方案：更新windows版本或更新.Net</p>
+</li>
+</ol>
+<ol start="2">
+<li>XenCenter的版本要与XenServer版本对应，低版本的XenCenter不能连接高版本的XenServer主机。</li>
+</ol>
+<h2 id="利用XenCenter搭建虚拟机"><a href="#利用XenCenter搭建虚拟机" class="headerlink" title="利用XenCenter搭建虚拟机"></a>利用XenCenter搭建虚拟机</h2><h4 id="安装说明"><a href="#安装说明" class="headerlink" title="安装说明"></a>安装说明</h4><p>在XenServer安装虚拟机，和传统的操作系统安装不同的是，需要把镜像文件单独放在别的机器上可以以文件共享的方式也可以以NFS的方式，也可以在本地进行iso目录的挂载，然后去装虚拟机，本次使用的也是最后这种方式。</p>
+<h4 id="安装步骤-1"><a href="#安装步骤-1" class="headerlink" title="安装步骤"></a>安装步骤</h4><ol>
+<li><p>创建一个myiso文件夹来存放iso文件，mkdir  /myiso</p>
+</li>
+<li><p>执行<strong>xe sr-create name-label=iso type=iso device-config:location=/iso device-config:legacy_mode= true content-type=iso </strong> 命令 建立iso档型式的储存库(SR - Storage Repositories)，新增成功，上传那些iso文件档至主机的/iso即可。在XenCenter会出现一个项目    （如果没有出现对应的ISO光盘，在存储位置点击重新扫描即可。）</p>
+</li>
+<li><p>新建vm选择要安装的vm类型版本</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104154856611.png" alt="image-20201104154725972"></p>
+</li>
+<li><p>设置vm名称</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104154725972.png" alt="image-20201104154856611"></p>
+</li>
+<li><p>选择安装介质，选择我们之前上传到/myiso目录下的镜像</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104154951345.png" alt="image-20201104154951345"></p>
+</li>
+<li><p>选择主服务器</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104155041913.png" alt="image-20201104155041913"></p>
+</li>
+<li><p>配置服务器的cpu以及内存</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104155458408.png" alt="image-20201104155126246"></p>
+</li>
+<li><p>配置硬盘大小最大不能超过2T</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104155319201.png" alt="image-20201104155319201"></p>
+</li>
+<li><p>配置网络接口</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104155642039.png" alt="image-20201104155458408"></p>
+</li>
+<li><p>然后点击完成即可安装好了</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104160857333.png" alt="image-20201104155642039"></p>
+</li>
+<li><p>然后进入正常的ubuntu安装界面，进行安装</p>
+<h4 id="安装过程中出现的问题"><a href="#安装过程中出现的问题" class="headerlink" title="安装过程中出现的问题"></a>安装过程中出现的问题</h4></li>
+<li><p>根目录大小，可以在重新挂载，默认200Gb，具体如图</p>
+<p><img src="https://gitee.com/yhndbd/img/raw/master/image-20201104155126246.png" alt="image-20201104160857333"></p>
+<p><strong>（如果安装时没有挂载可以，安装完成之后，用命令进行挂载）</strong></p>
+</li>
+</ol>
+<ol start="2">
+<li><p>安装过程中，最后有个OPSSH安装，勾上，省的去手动安装</p>
+</li>
+<li><p>安装过程中，有个IP设置，默认是DHCP、也可以手动改为静态IP，（安装完可在/etc/netplan下的配置文件中更改）</p>
+<p>Subnet  ： 192.168.3.0/24 </p>
+<p>address： 192.168.3.32</p>
+<p>gateway： 192.168.3.1</p>
+<p>nameserver： 8.8.8.8</p>
+</li>
+</ol>
+<h3 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h3><p>由于要进行多台安装，一台一台安装比较麻烦，可以进行vm复制进行快速安装</p>
 
       </div>
       
@@ -460,10 +554,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-02-10T16:09:45+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-11-04T16:57:19+08:00">
   <a class='notlink'>
     <i class="fas fa-clock" aria-hidden="true"></i>
-    <p>更新于 2020年2月10日</p>
+    <p>更新于 2020年11月4日</p>
   </a>
 </div>
 
@@ -472,7 +566,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/hexo/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/blog/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>blog</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/服务器/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>服务器</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/blog/tags/运维/" rel="nofollow"><i class="fas fa-tag" aria-hidden="true"></i><p>运维</p></a></div>
 
 
         
@@ -485,7 +579,7 @@
       
         <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknew.com/hexo/&title=使用hexo 搭建博客(一) | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.windknew.com/Xenserver服务搭建/&title=XenServer服务搭建（8.2） | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -497,7 +591,7 @@
       
         <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknew.com/hexo/&title=使用hexo 搭建博客(一) | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.windknew.com/Xenserver服务搭建/&title=XenServer服务搭建（8.2） | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -507,7 +601,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3aQW7DMAwEQP//0+61QBF5SZlOUoxOgZNI4wshLXUc8Tj/jFff/n6SzHlMDFxc3G3uuRyvQMnyyZy5ARcX93nuevn11Otyti5/uQEXF/dbuEkJW+9ScHFx/xN3/cvq4QcXF/czuflBpVrOkt+PnNVwcXE3uHlKOfd5JN/FxcVtcc/iqEYkeVwSrY6Li/sIt9oQzeOPnFheFxcX93HuzqRJ+2T/qgcuLu6T3P2gs1rOeneucHFxp7m9rckELopicXFxH+HuXIYoBBmtMOXi8IOLizvGzbcat5WhIIi5KGG4uLhv4vZKWDXmyEvbRSHDxcW9lZsUl15LNSl5vRfDxcV9kltdYOfAk6e50avi4uIOcKvtjWq0Wj3wXDzHxcV9EzeJPHplKP+2nO/i4uIOc/PFesen9b/KTVZcXNwxbh6IVJ/0wpFjZzeEi4u7wT2Lo1qMevFrIU/FxcUd4OajN3X+ktVLHri4uNPcneLV2/rkAetFYIqLizvMzcvQTi+3WkFfFjJcXNwP4/auYlRbKRfhCC4u7kdyq2HoTvBxQyHDxcVtcfMtS699Un2lqCeMi4s7xi2XkiD+uLfhiouL+yD3B20wUsHoR4YXAAAAAElFTkSuQmCC'>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3ay46bQBAFUP//TzvbSBH2vdVkNHQfViNDgMOiUq/XKz7eF8ffZ/+9Pr/n1S83HxgYGI9lvD8eM8YVKblnew0GBsY5jPzx7ZWff/n8UZJ3w8DAwMgfnFDz8IqBgYGxHnCvfslD5xUeAwMDY6WI/fyvkgd/LkR/qBbHwMB4ICPvuv/83/9lvoGBgfEoxrs8klCbXJmnmNFbYWBgbM1YX4y4q2G3vqiBgYGxN6NtbLVtsqSsXXkWBgbGCYz80iRQtqneSssPAwPjNMbK2Vn5mqSSN0xiMTAwHs6YrWclgbItYnNw1DXEwMA4gJEXt7PVh3bhrB5hYmBgbMdob71elLaDhC//DWBgYGzNyJO2pA3XstvAXSxbYGBgbMrIb9Rma/nwMh8DfBlhYmBgbMTI069ZkJ2NE+rPh4GBsTUjT7zuLXfbFY2iMYeBgXEkY7awtT6evC3PxcDAeDgjD6NJudsG1jwR/PKeGBgYWzNmt7ir+MwT0CSVxMDA2JvRjgRmS12zNdkkiGNgYJzGSBK+e9ttedNtadkCAwNja8ZKMdl+gnyB47adEQwMjF/PmI0BZl8rb8+1Y1QMDIy9GW2wa2HrTbpZwYyBgbEfY7ZOMWuK5aPNOuBiYGAcwGgDX/tCs+Bbl7IYGBgYAWmWMrYtvFd+AgMD40jGbFWiHULkrToMDIxzGEkR265ZtJ+jXcvAwMA4hzErHdvB58rZ9TQUAwPjsYw/52Qi4Fy3ROwAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
         
@@ -517,7 +611,7 @@
       
         <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=http://www.windknew.com/hexo/&title=使用hexo 搭建博客(一) | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
+          href="http://service.weibo.com/share/share.php?url=http://www.windknew.com/Xenserver服务搭建/&title=XenServer服务搭建（8.2） | 风晓博客&pics=http://s.aigei.com/src/img/png/60/60f7cfdcc4844e9ebfbfc74763e0c7ab.png?imageMogr2/auto-orient/thumbnail/!234x201r/gravity/Center/crop/234x201/quality/85/&e=1735488000&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:m1bcsbUeKmzfRPvXR5g7IFuuAh0=&summary="
           
           >
           
@@ -527,7 +621,7 @@
       
     
       
-        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3aQW7DMAwEQP//0+61QBF5SZlOUoxOgZNI4wshLXUc8Tj/jFff/n6SzHlMDFxc3G3uuRyvQMnyyZy5ARcX93nuevn11Otyti5/uQEXF/dbuEkJW+9ScHFx/xN3/cvq4QcXF/czuflBpVrOkt+PnNVwcXE3uHlKOfd5JN/FxcVtcc/iqEYkeVwSrY6Li/sIt9oQzeOPnFheFxcX93HuzqRJ+2T/qgcuLu6T3P2gs1rOeneucHFxp7m9rckELopicXFxH+HuXIYoBBmtMOXi8IOLizvGzbcat5WhIIi5KGG4uLhv4vZKWDXmyEvbRSHDxcW9lZsUl15LNSl5vRfDxcV9kltdYOfAk6e50avi4uIOcKvtjWq0Wj3wXDzHxcV9EzeJPHplKP+2nO/i4uIOc/PFesen9b/KTVZcXNwxbh6IVJ/0wpFjZzeEi4u7wT2Lo1qMevFrIU/FxcUd4OajN3X+ktVLHri4uNPcneLV2/rkAetFYIqLizvMzcvQTi+3WkFfFjJcXNwP4/auYlRbKRfhCC4u7kdyq2HoTvBxQyHDxcVtcfMtS699Un2lqCeMi4s7xi2XkiD+uLfhiouL+yD3B20wUsHoR4YXAAAAAElFTkSuQmCC'>
+        <a class='qrcode' rel="external nofollow noopener noreferrer" href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3ay46bQBAFUP//TzvbSBH2vdVkNHQfViNDgMOiUq/XKz7eF8ffZ/+9Pr/n1S83HxgYGI9lvD8eM8YVKblnew0GBsY5jPzx7ZWff/n8UZJ3w8DAwMgfnFDz8IqBgYGxHnCvfslD5xUeAwMDY6WI/fyvkgd/LkR/qBbHwMB4ICPvuv/83/9lvoGBgfEoxrs8klCbXJmnmNFbYWBgbM1YX4y4q2G3vqiBgYGxN6NtbLVtsqSsXXkWBgbGCYz80iRQtqneSssPAwPjNMbK2Vn5mqSSN0xiMTAwHs6YrWclgbItYnNw1DXEwMA4gJEXt7PVh3bhrB5hYmBgbMdob71elLaDhC//DWBgYGzNyJO2pA3XstvAXSxbYGBgbMrIb9Rma/nwMh8DfBlhYmBgbMTI069ZkJ2NE+rPh4GBsTUjT7zuLXfbFY2iMYeBgXEkY7awtT6evC3PxcDAeDgjD6NJudsG1jwR/PKeGBgYWzNmt7ir+MwT0CSVxMDA2JvRjgRmS12zNdkkiGNgYJzGSBK+e9ttedNtadkCAwNja8ZKMdl+gnyB47adEQwMjF/PmI0BZl8rb8+1Y1QMDIy9GW2wa2HrTbpZwYyBgbEfY7ZOMWuK5aPNOuBiYGAcwGgDX/tCs+Bbl7IYGBgYAWmWMrYtvFd+AgMD40jGbFWiHULkrToMDIxzGEkR265ZtJ+jXcvAwMA4hzErHdvB58rZ9TQUAwPjsYw/52Qi4Fy3ROwAAAAASUVORK5CYII='>
         
           <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
         
@@ -549,25 +643,25 @@
       
           <div class="prev-next">
               
-                  <section class="prev">
-                      <span class="art-item-left">
-                          <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+              
+                  <section class="next">
+                      <span class="art-item-right" aria-hidden="true">
+                          <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
                           <h4>
-                              <a href="/hexo-1/" rel="prev" title="使用hexo搭建博客（二）">
-                                
-                                    使用hexo搭建博客（二）
-                                
+                              <a href="/零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（二）/" rel="prev" title="零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（二）">
+                                  
+                                      零基础完成珍爱网项目 Java+MySQL+echarts     （ZhenaiSpider+ZhenaiWeb）（二）
+                                  
                               </a>
                           </h4>
                           
                               
                               <h6 class="tags">
-                                  <a class="tag" href="/blog/tags/hexo/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> hexo</a> <a class="tag" href="/blog/tags/blog/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> blog</a>
+                                  <a class="tag" href="/blog/tags/爬虫/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 爬虫</a> <a class="tag" href="/blog/tags/教程/"><i class="fas fa-tag fa-fw" aria-hidden="true"></i> 教程</a>
                               </h6>
                           
                       </span>
                   </section>
-              
               
           </div>
       
@@ -607,7 +701,7 @@
 
   <script>
     window.subData = {
-      title: '使用hexo 搭建博客(一)',
+      title: 'XenServer服务搭建（8.2）',
       tools: true
     }
   </script>
@@ -769,7 +863,7 @@
 </header>
 
     <div class='content material'>
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用Hexo搭建博客（一）"><span class="toc-text">使用Hexo搭建博客（一）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言："><span class="toc-text">引言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-说明"><span class="toc-text">Hexo 说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备环境"><span class="toc-text">准备环境</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#本地启动"><span class="toc-text">本地启动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新建页面和文章"><span class="toc-text">新建页面和文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#编辑文章"><span class="toc-text">编辑文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown文章编辑"><span class="toc-text">Markdown文章编辑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用命令总结"><span class="toc-text">常用命令总结</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#XenServer"><span class="toc-text">XenServer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XenServer简介"><span class="toc-text">XenServer简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#准备工作"><span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装步骤"><span class="toc-text">安装步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装过程中遇到的问题"><span class="toc-text">安装过程中遇到的问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#XenCenter"><span class="toc-text">XenCenter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#XenCenter-简介"><span class="toc-text">XenCenter 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XenCenter-安装"><span class="toc-text">XenCenter 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#XenCenter安装过程中出现的问题及解决方法"><span class="toc-text">XenCenter安装过程中出现的问题及解决方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#利用XenCenter搭建虚拟机"><span class="toc-text">利用XenCenter搭建虚拟机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装说明"><span class="toc-text">安装说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装步骤-1"><span class="toc-text">安装步骤</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装过程中出现的问题"><span class="toc-text">安装过程中出现的问题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#最后"><span class="toc-text">最后</span></a></li></ol></li></ol>
     </div>
   </section>
 
